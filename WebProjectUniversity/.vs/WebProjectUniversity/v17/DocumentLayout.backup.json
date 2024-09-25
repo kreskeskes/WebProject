@@ -1,0 +1,1127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E009F80-25AD-4F50-9556-27E6B8C1C79B}|WebProjectUniversity.ServiceTests\\WebProjectUniversity.ServiceTests.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.servicetests\\productsservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E009F80-25AD-4F50-9556-27E6B8C1C79B}|WebProjectUniversity.ServiceTests\\WebProjectUniversity.ServiceTests.csproj|solutionrelative:webprojectuniversity.servicetests\\productsservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebProjectUniversityDatabase/True/SqlTable/dbo.ProductProductCategory.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\productsubcategories.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\productsubcategories.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\products.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\products.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebProjectUniversityDatabase/True/SqlTable/dbo.Products.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.infrastructure\\appdbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|solutionrelative:webprojectuniversity.infrastructure\\appdbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\entities\\productfolder\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\entities\\productfolder\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240923025408_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebProjectUniversity.Infrastructure\\Migrations\\20240923025408_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\productcategories.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\productcategories.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240923024256_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebProjectUniversity.Infrastructure\\Migrations\\20240923024256_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\products\\productsgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\products\\productsgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\products\\productsupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\products\\productsupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\entities\\productfolder\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\entities\\productfolder\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\entities\\productfolder\\productproductcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\entities\\productfolder\\productproductcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\entities\\productfolder\\productsubcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\entities\\productfolder\\productsubcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.infrastructure\\repositories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|solutionrelative:webprojectuniversity.infrastructure\\repositories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.infrastructure\\repositories\\subcategoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|solutionrelative:webprojectuniversity.infrastructure\\repositories\\subcategoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productsubcategoryaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productsubcategoryaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productcategoryupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productcategoryupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\products\\productssorterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\products\\productssorterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\products\\productsdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\products\\productsdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\products\\productsadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\products\\productsadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productsubcatergoryupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productsubcatergoryupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productsubcategoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productsubcategoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productcategoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productcategoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\dto\\productcategoryaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\dto\\productcategoryaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\repositorycontracts\\isubcategoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\repositorycontracts\\isubcategoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\repositorycontracts\\iproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\repositorycontracts\\iproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\repositorycontracts\\icategoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\repositorycontracts\\icategoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\enums\\sizeoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\enums\\sizeoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\domain\\enums\\agegendergroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\domain\\enums\\agegendergroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\views\\products\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\views\\products\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\wwwroot\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\wwwroot\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.infrastructure\\repositories\\categoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|solutionrelative:webprojectuniversity.infrastructure\\repositories\\categoriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productscategories\\categoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productscategories\\categoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productscategories\\categoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productscategories\\categoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productscategories\\categoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productscategories\\categoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productscategories\\categoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productscategories\\categoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.infrastructure\\webprojectuniversity.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{17D52C57-A097-4639-9406-A45829B3483B}|WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj|solutionrelative:webprojectuniversity.infrastructure\\webprojectuniversity.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductscategories\\icategoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productssubcategories\\subcategoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productssubcategories\\subcategoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productssubcategories\\subcategoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productssubcategories\\subcategoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productssubcategories\\subcategoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productssubcategories\\subcategoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\service\\productssubcategories\\subcategoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\service\\productssubcategories\\subcategoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproducts\\iproductsupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproducts\\iproductsupdaterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220442_anotherMigration3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebProjectUniversity.Infrastructure\\Migrations\\20240911220442_anotherMigration3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911215704_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebProjectUniversity.Infrastructure\\Migrations\\20240911215704_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220254_anotherMigration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebProjectUniversity.Infrastructure\\Migrations\\20240911220254_anotherMigration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220049_anotherMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebProjectUniversity.Infrastructure\\Migrations\\20240911220049_anotherMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproducts\\iproductsgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproducts\\iproductsgetterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproductssubcategories\\isubcategoriesdeleterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|c:\\users\\kristy\\source\\repos\\webprojectuniversity\\webprojectuniversity.core\\servicecontracts\\iproducts\\iproductsadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E3675A-5E5B-46CE-A63A-50278DF55089}|WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj|solutionrelative:webprojectuniversity.core\\servicecontracts\\iproducts\\iproductsadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.ProductProductCategory [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebProjectUniversityDatabase/True/SqlTable/dbo.ProductProductCategory.sql",
+              "ToolTip": "dbo.ProductProductCategory [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-23T03:06:21.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.ServiceTests\\ProductsServiceTest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.ServiceTests\\ProductsServiceTest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.ServiceTests\\ProductsServiceTest.cs",
+              "RelativeToolTip": "WebProjectUniversity.ServiceTests\\ProductsServiceTest.cs",
+              "ViewState": "AgIAAGkBAAAAAAAAAAAgwJIBAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T20:39:03.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductAddRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductAddRequest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductAddRequest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductAddRequest.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductAddRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:47:20.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "productSubcategories.json",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\productSubcategories.json",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\productSubcategories.json",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\productSubcategories.json",
+              "RelativeToolTip": "WebProjectUniversity\\productSubcategories.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-11T19:57:19.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "products.json",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\products.json",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\products.json",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\products.json",
+              "RelativeToolTip": "WebProjectUniversity\\products.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-11T19:57:55.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.Products [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebProjectUniversityDatabase/True/SqlTable/dbo.Products.sql",
+              "ToolTip": "dbo.Products [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-23T02:44:23.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\AppDbContext\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\AppDbContext\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\AppDbContext\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\AppDbContext\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T14:34:25.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\Product.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\Product.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\Product.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\Product.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T12:39:40.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20240923025408_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240923025408_Initial.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Migrations\\20240923025408_Initial.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240923025408_Initial.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Migrations\\20240923025408_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:54:09.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Program.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Program.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Program.cs",
+              "RelativeToolTip": "WebProjectUniversity\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T19:35:51.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "productCategories.json",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\productCategories.json",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\productCategories.json",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\productCategories.json",
+              "RelativeToolTip": "WebProjectUniversity\\productCategories.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-11T19:56:37.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240923024256_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240923024256_Initial.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Migrations\\20240923024256_Initial.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240923024256_Initial.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Migrations\\20240923024256_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:42:56.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductsGetterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsGetterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\Products\\ProductsGetterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsGetterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\Products\\ProductsGetterService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:26:01.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductsUpdaterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsUpdaterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\Products\\ProductsUpdaterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsUpdaterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\Products\\ProductsUpdaterService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:26:34.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductUpdateRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductUpdateRequest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductUpdateRequest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductUpdateRequest.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductUpdateRequest.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAACoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T20:00:54.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductResponse.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductResponse.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductResponse.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductResponse.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:48:01.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductCategory.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductCategory.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductCategory.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductCategory.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABIAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:26:58.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductProductCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductProductCategory.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductProductCategory.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductProductCategory.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductProductCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:10:30.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "WebProjectUniversity\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAIwB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T14:49:18.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductSubcategory.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductSubcategory.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductSubcategory.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductSubcategory.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\Entities\\ProductFolder\\ProductSubcategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:27:56.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAC8AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T14:49:00.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Repositories\\ProductsRepository.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Repositories\\ProductsRepository.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Repositories\\ProductsRepository.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Repositories\\ProductsRepository.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwEMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T18:03:04.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SubcategoriesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Repositories\\SubcategoriesRepository.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Repositories\\SubcategoriesRepository.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Repositories\\SubcategoriesRepository.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Repositories\\SubcategoriesRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T18:02:51.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductSubcategoryAddRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductSubcategoryAddRequest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductSubcategoryAddRequest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductSubcategoryAddRequest.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductSubcategoryAddRequest.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:47:52.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProductCategoryUpdateRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductCategoryUpdateRequest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductCategoryUpdateRequest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductCategoryUpdateRequest.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductCategoryUpdateRequest.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:09:53.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductsSorterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsSorterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\Products\\ProductsSorterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsSorterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\Products\\ProductsSorterService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:26:18.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductsDeleterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsDeleterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\Products\\ProductsDeleterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsDeleterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\Products\\ProductsDeleterService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:25:38.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProductsAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsAdderService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\Products\\ProductsAdderService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\Products\\ProductsAdderService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\Products\\ProductsAdderService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:16:03.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ProductSubcatergoryUpdateRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductSubcatergoryUpdateRequest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductSubcatergoryUpdateRequest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductSubcatergoryUpdateRequest.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductSubcatergoryUpdateRequest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:17:12.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProductSubcategoryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductSubcategoryResponse.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductSubcategoryResponse.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductSubcategoryResponse.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductSubcategoryResponse.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABkAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:48:23.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProductCategoryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductCategoryResponse.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductCategoryResponse.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductCategoryResponse.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductCategoryResponse.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:48:13.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductCategoryAddRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductCategoryAddRequest.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\DTO\\ProductCategoryAddRequest.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\DTO\\ProductCategoryAddRequest.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\DTO\\ProductCategoryAddRequest.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T17:47:35.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ISubcategoriesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ISubcategoriesRepository.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ISubcategoriesRepository.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ISubcategoriesRepository.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ISubcategoriesRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:16:33.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\RepositoryContracts\\IProductsRepository.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\RepositoryContracts\\IProductsRepository.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\RepositoryContracts\\IProductsRepository.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\RepositoryContracts\\IProductsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T20:45:01.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ICategoriesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ICategoriesRepository.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ICategoriesRepository.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ICategoriesRepository.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\RepositoryContracts\\ICategoriesRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:16:20.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SizeOptions.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Enums\\SizeOptions.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\Enums\\SizeOptions.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Enums\\SizeOptions.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\Enums\\SizeOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T21:28:32.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AgeGenderGroup.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Enums\\AgeGenderGroup.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Domain\\Enums\\AgeGenderGroup.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Domain\\Enums\\AgeGenderGroup.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Domain\\Enums\\AgeGenderGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T12:56:16.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\appsettings.json",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\appsettings.json",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\appsettings.json",
+              "RelativeToolTip": "WebProjectUniversity\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-11T19:24:34.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AddProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\Products\\AddProduct.cshtml",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Views\\Products\\AddProduct.cshtml",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\Products\\AddProduct.cshtml",
+              "RelativeToolTip": "WebProjectUniversity\\Views\\Products\\AddProduct.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-22T18:20:23.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "StyleSheet.css",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\wwwroot\\StyleSheet.css",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
+              "RelativeToolTip": "WebProjectUniversity\\wwwroot\\StyleSheet.css",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAQwJgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-18T15:16:08.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "WebProjectUniversity\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T15:22:39.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebProjectUniversity\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T15:08:12.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CategoriesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Repositories\\CategoriesRepository.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Repositories\\CategoriesRepository.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Repositories\\CategoriesRepository.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Repositories\\CategoriesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T18:02:25.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ICategoriesAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesAdderService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesAdderService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesAdderService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesAdderService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T19:42:32.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CategoriesAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesAdderService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesAdderService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesAdderService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesAdderService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwC0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:28:00.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CategoriesGetterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesGetterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesGetterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesGetterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesGetterService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAB4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:29:49.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CategoriesDeleterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesDeleterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesDeleterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesDeleterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesDeleterService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:29:25.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ICategoriesDeleterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesDeleterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesDeleterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesDeleterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesDeleterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T19:45:07.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CategoriesUpdaterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesUpdaterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesUpdaterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesUpdaterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsCategories\\CategoriesUpdaterService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAB0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:30:21.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "WebProjectUniversity.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-18T01:36:22.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ICategoriesUpdaterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesUpdaterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesUpdaterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesUpdaterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesUpdaterService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T20:03:07.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ICategoriesGetterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesGetterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesGetterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesGetterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsCategories\\ICategoriesGetterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:21:06.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "SubcategoriesDeleterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesDeleterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesDeleterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesDeleterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesDeleterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:39:47.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "SubcategoriesAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesAdderService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesAdderService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesAdderService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesAdderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:38:23.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "SubcategoriesGetterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesGetterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesGetterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesGetterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesGetterService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:38:39.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "SubcategoriesUpdaterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesUpdaterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesUpdaterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesUpdaterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\Service\\ProductsSubcategories\\SubcategoriesUpdaterService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:40:31.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ISubcategoriesUpdaterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesUpdaterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesUpdaterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesUpdaterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesUpdaterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:44:57.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ISubcategoriesGetterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesGetterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesGetterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesGetterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesGetterService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:43:52.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ISubcategoriesAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesAdderService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesAdderService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesAdderService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesAdderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:39:53.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "IProductsUpdaterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsUpdaterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsUpdaterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsUpdaterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsUpdaterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T17:27:05.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "20240911220254_anotherMigration2.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220254_anotherMigration2.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Migrations\\20240911220254_anotherMigration2.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220254_anotherMigration2.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Migrations\\20240911220254_anotherMigration2.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T22:02:54.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "20240911220442_anotherMigration3.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220442_anotherMigration3.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Migrations\\20240911220442_anotherMigration3.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220442_anotherMigration3.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Migrations\\20240911220442_anotherMigration3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T22:04:42.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20240911220049_anotherMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220049_anotherMigration.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Migrations\\20240911220049_anotherMigration.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911220049_anotherMigration.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Migrations\\20240911220049_anotherMigration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T22:00:49.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "20240911215704_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911215704_Initial.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Infrastructure\\Migrations\\20240911215704_Initial.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\Migrations\\20240911215704_Initial.cs",
+              "RelativeToolTip": "WebProjectUniversity.Infrastructure\\Migrations\\20240911215704_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwHcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T21:57:05.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "IProductsGetterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsGetterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsGetterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsGetterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsGetterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T19:47:53.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ISubcategoriesDeleterService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesDeleterService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesDeleterService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesDeleterService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProductsSubcategories\\ISubcategoriesDeleterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:41:12.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "IProductsAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsAdderService.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsAdderService.cs",
+              "ToolTip": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsAdderService.cs",
+              "RelativeToolTip": "WebProjectUniversity.Core\\ServiceContracts\\IProducts\\IProductsAdderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T21:31:28.481Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

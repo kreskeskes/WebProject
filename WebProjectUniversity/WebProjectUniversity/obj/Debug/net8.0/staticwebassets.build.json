@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "UTtQqdz+fB2aQ6tZJSTtl7UGY3wPuddUSTG2NRNkuXQ=",
+  "Source": "WebProjectUniversity.UI",
+  "BasePath": "_content/WebProjectUniversity.UI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebProjectUniversity.UI\\wwwroot",
+      "Source": "WebProjectUniversity.UI",
+      "ContentRoot": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
+      "BasePath": "_content/WebProjectUniversity.UI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
+      "SourceId": "WebProjectUniversity.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
+      "BasePath": "_content/WebProjectUniversity.UI",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WebProjectUniversity.UI.props" />
+</Project>

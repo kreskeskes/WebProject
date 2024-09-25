@@ -1,0 +1,49 @@
+﻿@model List<ProductResponse>;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="box-container">
+    <div>
+        <a asp-controller="products" asp-action="addproduct">Add New Product</a>
+    </div>
+    <h1>Product Details</h1>
+
+    @foreach (ProductResponse product in Model)
+    {
+        <div class="product-property">
+            <span>Product Name: </span>
+            @product.Name
+        </div>
+
+        <div class="product-property">
+            <span>Product ID: </span>
+            @product.Id
+        </div>
+
+        <div class="product-property">
+            <span>Product Subcategory Id: </span>
+            @product.ProductSubcategoryId
+        </div>
+
+        <div class="product-property">
+            <span>Product Price: </span>
+            @product.Price
+        </div>
+
+        <div class="product-property">
+            <span>Product Size: </span>
+            @foreach(var size in product.Sizes)
+            {
+                @size
+            }
+        </div>
+
+        <div>
+            <br />
+        </div>
+
+    }
+
+</div>

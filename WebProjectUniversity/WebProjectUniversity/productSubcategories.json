@@ -1,0 +1,12 @@
+[
+  {
+    "Id": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35",
+    "Name": "T-Shirts",
+    "CategoryId": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"
+  },
+  {
+    "Id": "15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43",
+    "Name": "Dresses",
+    "CategoryId": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"
+  }
+]

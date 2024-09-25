@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" asp-append-version="true" />
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a asp-controller="products" asp-action="index">WebAppLogo</a></div>
+            <ul class="menu">
+                <li><a asp-controller="products" asp-action="index">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Category">Category</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Feedback">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+        <a asp-controller="products" asp-action="index"> <i class="fas fa-arrow-up"></i> </a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

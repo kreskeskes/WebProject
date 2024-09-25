@@ -1,0 +1,31 @@
+[
+  {
+    "Id": "e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3",
+    "Name": "Graphic Tee",
+    "Description": "A cool graphic t-shirt.",
+    "Price": 29.99,
+    "Sizes": [ "M", "L" ],
+    "Color": "Black",
+    "Brand": "CoolBrand",
+    "ProductCategoryIds": [ // Updated to reflect IDs
+      "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54",
+      "f4d38c7a-14d2-4f2c-8738-df1d6b57c4bc"
+    ],
+    "ProductSubcategoryId": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35",
+    "AgeGenderGroup": "Men"
+  },
+  {
+    "Id": "4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9",
+    "Name": "Summer Dress",
+    "Description": "A stylish summer dress.",
+    "Price": 49.99,
+    "Sizes": [ "S", "M" ],
+    "Color": "Red",
+    "Brand": "Fashionista",
+    "ProductCategoryIds": [ // Updated to reflect IDs
+      "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"
+    ],
+    "ProductSubcategoryId": "15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43",
+    "AgeGenderGroup": "Women"
+  }
+]

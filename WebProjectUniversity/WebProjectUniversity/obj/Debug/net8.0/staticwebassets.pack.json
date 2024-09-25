@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebProjectUniversity.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebProjectUniversity.UI.props",
+      "PackagePath": "build\\WebProjectUniversity.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebProjectUniversity.UI.props",
+      "PackagePath": "buildMultiTargeting\\WebProjectUniversity.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebProjectUniversity.UI.props",
+      "PackagePath": "buildTransitive\\WebProjectUniversity.UI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

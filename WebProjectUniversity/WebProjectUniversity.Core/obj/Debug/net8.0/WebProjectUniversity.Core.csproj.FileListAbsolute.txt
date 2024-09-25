@@ -1,0 +1,11 @@
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\WebProjectUniversity.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\WebProjectUniversity.Core.AssemblyInfoInputs.cache
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\WebProjectUniversity.Core.AssemblyInfo.cs
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\WebProjectUniversity.Core.csproj.CoreCompileInputs.cache
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\bin\Debug\net8.0\WebProjectUniversity.Core.deps.json
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\bin\Debug\net8.0\WebProjectUniversity.Core.dll
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\bin\Debug\net8.0\WebProjectUniversity.Core.pdb
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\WebProjectUniversity.Core.dll
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\refint\WebProjectUniversity.Core.dll
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\WebProjectUniversity.Core.pdb
+C:\Users\Kristy\source\repos\WebProjectUniversity\WebProjectUniversity.Core\obj\Debug\net8.0\ref\WebProjectUniversity.Core.dll
