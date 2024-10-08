@@ -1,49 +1,42 @@
-﻿@model List<ProductResponse>;
+﻿@model List<ProductResponse>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<div class="box-container">
+<div class="page-content">
     <div>
         <a asp-controller="products" asp-action="addproduct">Add New Product</a>
     </div>
     <h1>Product Details</h1>
-
-    @foreach (ProductResponse product in Model)
-    {
-        <div class="product-property">
-            <span>Product Name: </span>
-            @product.Name
-        </div>
-
-        <div class="product-property">
-            <span>Product ID: </span>
-            @product.Id
-        </div>
-
-        <div class="product-property">
-            <span>Product Subcategory Id: </span>
-            @product.ProductSubcategoryId
-        </div>
-
-        <div class="product-property">
-            <span>Product Price: </span>
-            @product.Price
-        </div>
-
-        <div class="product-property">
-            <span>Product Size: </span>
-            @foreach(var size in product.Sizes)
-            {
-                @size
-            }
-        </div>
-
-        <div>
-            <br />
-        </div>
-
-    }
-
+    <div class="box-container">
+        @foreach (ProductResponse product in Model)
+        {
+            <div class="card-container">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/1022px-Placeholder_view_vector.svg.png?20220519031949" style="width:100%; height:200px;" alt="">
+                    </div>
+                    <h1>@product.Name</h1>
+                    <div class="price">
+                        <div class="size-picker">
+                            <p>Choose Size</p>
+                            <div class="size">
+                                @foreach (var size in product.Sizes)
+                                {
+                                    <span>@size</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <p class="normal">@product.Price</p>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button>Buy Now</button>
+                        <button>Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>

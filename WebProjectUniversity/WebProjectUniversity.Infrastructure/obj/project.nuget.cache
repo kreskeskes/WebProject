@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IEJuqiGiuVc=",
+  "dgSpecHash": "SOZPtFCdIDs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kristy\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Kristy\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

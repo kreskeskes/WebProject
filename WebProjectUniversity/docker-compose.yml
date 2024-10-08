@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  productservice:
+    image: ${DOCKER_REGISTRY-}productservice
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+    ports:
+      - "8080:5000"
+      - "8081:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1400;Database=WebProjectUniDatabase;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=MyPass@word;
+    depends_on:
+      - db
+
+  webprojectuniversity.ui:
+    image: ${DOCKER_REGISTRY-}webprojectuniversityui
+    build:
+      context: .
+      dockerfile: WebProjectUniversity/Dockerfile
+    ports:
+      - "8084:5000"  
+      - "8085:5001" 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=MyPass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+    ports:
+      - "1400:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+
+volumes:
+  sqlserverdata:
+
+

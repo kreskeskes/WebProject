@@ -4282,11 +4282,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
       "projectName": "WebProjectUniversity.Infrastructure",
-      "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Kristy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4304,8 +4304,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
-              "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj"
+            "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
+              "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj"
             }
           }
         }

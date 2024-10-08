@@ -1,52 +1,48 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using WebProjectUniversity.Core.Domain.Enums;
-using WebProjectUniversity.Core.DTO;
-using WebProjectUniversity.Core.ServiceContracts.ICategories;
-using WebProjectUniversity.Core.ServiceContracts.IProducts;
+using ProductService.DTO;
+using WebProjectUniversity.UI.Clients;
 
 namespace WebProjectUniversity.UI.Controllers
 {
-
     [Route("[controller]")]
     public class ProductsController : Controller
     {
-        private readonly IProductsAdderService _productsAdderService;
-        private readonly IProductsGetterService _productsGetterService;
-        private readonly IProductsDeleterService _productsDeleterService;
-        private readonly IProductsUpdaterService _productsUpdaterService;
-        private readonly IProductsSorterService _productsSorterService;
+        private readonly ProductServiceClient _productServiceClient;
 
-
-
-        public ProductsController(IProductsAdderService productsAdderService, IProductsGetterService productsGetterService, IProductsSorterService productsSorterService, IProductsUpdaterService productsUpdaterService, IProductsDeleterService productsDeleterService)
+        public ProductsController(ProductServiceClient productServiceClient)
         {
-            _productsAdderService = productsAdderService;
-            _productsGetterService = productsGetterService;
-            _productsDeleterService = productsDeleterService;
-            _productsUpdaterService = productsUpdaterService;
-            _productsSorterService = productsSorterService;
+            _productServiceClient = productServiceClient;
         }
 
-
-        [Route("[action]")]
-        [Route("/")]
+        [HttpGet("Index")]
         public async Task<IActionResult> Index()
         {
-            ViewBag.Title = "All products";
-            List<ProductResponse>? productResponses = await _productsGetterService.GetAllProducts();
-
-            return View(productResponses);
+            var products = await _productServiceClient.GetAllProductsAsync();
+            return View(products);
         }
 
-        [HttpGet]
-        [Route("[action]")]
+        [HttpGet("AddProduct")]
         public async Task<IActionResult> AddProduct()
         {
-            ViewBag.Title = "Add product";
-
-            ViewBag.AgeGenderGroups= new SelectList(Enum.GetValues(typeof(AgeGenderGroup)));
             return View();
         }
+
+        [HttpPost("AddProduct")]
+        public async Task<IActionResult> AddProduct(ProductAddRequest productAddRequest)
+        {
+           ViewBag.AgeGenderGroups = _productServiceClient.GetAllProductCategoriesAsync();
+           await _productServiceClient.AddProductAsync(productAddRequest);
+            if (!ModelState.IsValid)
+            {
+                return View(productAddRequest);
+
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        // Other actions like Create, Edit, Delete would follow a similar pattern
     }
 }

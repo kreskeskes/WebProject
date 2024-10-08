@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj": {}
+    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
+    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj",
-        "projectName": "WebProjectUniversity.Core",
-        "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
+        "projectName": "ProductService",
+        "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
         "packagesPath": "C:\\Users\\Kristy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\obj\\",
+        "outputPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,72 +45,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
-        "projectName": "WebProjectUniversity.Infrastructure",
-        "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Kristy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
-                "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -134,6 +73,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
+            "Ocelot": {
+              "target": "Package",
+              "version": "[23.3.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -148,6 +99,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -156,14 +110,14 @@
         }
       }
     },
-    "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj": {
+    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj",
         "projectName": "WebProjectUniversity.UI",
-        "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj",
+        "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\WebProjectUniversity.UI.csproj",
         "packagesPath": "C:\\Users\\Kristy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\obj\\",
+        "outputPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -181,11 +135,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
-                "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj"
-              },
-              "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Infrastructure\\WebProjectUniversity.Infrastructure.csproj"
+              "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj": {
+                "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj"
               }
             }
           }
@@ -222,6 +173,18 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.6.22, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.8.1, )"
             }
           },
           "imports": [

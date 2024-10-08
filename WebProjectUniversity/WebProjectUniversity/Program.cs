@@ -1,17 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Converters;
+using Ocelot.Values;
 using System.Text.Json.Serialization;
-using WebProjectUniversity.Core.Domain.RepositoryContracts;
-using WebProjectUniversity.Core.Service;
-using WebProjectUniversity.Core.Service.Products;
-using WebProjectUniversity.Core.Service.ProductsCategories;
-using WebProjectUniversity.Core.Service.ProductsSubcategories;
-using WebProjectUniversity.Core.ServiceContracts.ICategories;
-using WebProjectUniversity.Core.ServiceContracts.IProducts;
-using WebProjectUniversity.Core.ServiceContracts.IProductsCategories;
-using WebProjectUniversity.Core.ServiceContracts.IProductsSubcategories;
-using WebProjectUniversity.Infrastructure.AppDbContext;
-using WebProjectUniversity.Infrastructure.Repositories;
+
+using WebProjectUniversity.UI.Clients;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
@@ -20,35 +12,10 @@ builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
 });
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options=>
+builder.Services.AddHttpClient<ProductServiceClient>(client =>
 {
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    client.BaseAddress = new Uri("https://localhost:8081/"); // Update this URL to your ProductService API base address
 });
-
-
-
-builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
-builder.Services.AddScoped<ISubcategoriesRepository, SubcategoriesRepository>();
-builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
-
-
-builder.Services.AddScoped<IProductsAdderService, ProductsAdderService>();
-builder.Services.AddScoped<IProductsGetterService, ProductsGetterService>();
-builder.Services.AddScoped<IProductsDeleterService, ProductsDeleterService>();
-builder.Services.AddScoped<IProductsSorterService, ProductsSorterService>();
-builder.Services.AddScoped<IProductsUpdaterService, ProductsUpdaterService>();
-
-
-builder.Services.AddScoped<ICategoriesAdderService, CategoriesAdderService>();
-builder.Services.AddScoped<ICategoriesGetterService, CategoriesGetterService>();
-builder.Services.AddScoped<ICategoriesDeleterService, CategoriesDeleterService>();
-builder.Services.AddScoped<ICategoriesUpdaterService, CategoriesUpdaterService>();
-
-builder.Services.AddScoped<ISubcategoriesAdderService, SubcategoriesAdderService>();
-builder.Services.AddScoped<ISubcategoriesGetterService, SubcategoriesGetterService>();
-builder.Services.AddScoped<ISubcategoriesDeleterService, SubcategoriesDeleterService>();
-builder.Services.AddScoped<ISubcategoriesUpdaterService, SubcategoriesUpdaterService>();
-
 
 
 
@@ -56,7 +23,13 @@ var app = builder.Build();
 
 
 app.UseRouting();
+app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); // Map attribute-routed controllers
+});
+
+
 
 app.Run();

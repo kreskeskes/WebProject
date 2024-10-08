@@ -1,26 +1,45 @@
 {
   "Version": 1,
-  "Hash": "UTtQqdz+fB2aQ6tZJSTtl7UGY3wPuddUSTG2NRNkuXQ=",
+  "Hash": "Q1+OVCaPlFNNZFSgfloVyg5oPPACUG5C5WkqKfNZZQk=",
   "Source": "WebProjectUniversity.UI",
   "BasePath": "_content/WebProjectUniversity.UI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
+      "Version": 2,
+      "Source": "ProductService",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
+    {
+      "Name": "ProductService\\wwwroot",
+      "Source": "ProductService",
+      "ContentRoot": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\wwwroot\\",
+      "BasePath": "_content/ProductService",
+      "Pattern": "**"
+    },
     {
       "Name": "WebProjectUniversity.UI\\wwwroot",
       "Source": "WebProjectUniversity.UI",
-      "ContentRoot": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
       "BasePath": "_content/WebProjectUniversity.UI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
+      "Identity": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
       "SourceId": "WebProjectUniversity.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
       "BasePath": "_content/WebProjectUniversity.UI",
       "RelativePath": "StyleSheet.css",
       "AssetKind": "All",

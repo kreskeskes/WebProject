@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6bbaf45f-f940-42e6-b94a-6e5ef8d98639")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebProjectUniversity.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c37c8f207da176a5d7107d2704f5f45d63f45c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebProjectUniversity.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebProjectUniversity.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

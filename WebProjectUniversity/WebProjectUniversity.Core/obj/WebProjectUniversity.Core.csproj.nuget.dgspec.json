@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {}
+    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
+    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj",
         "projectName": "WebProjectUniversity.Core",
-        "projectPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj",
+        "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\WebProjectUniversity.Core.csproj",
         "packagesPath": "C:\\Users\\Kristy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristy\\source\\repos\\WebProjectUniversity\\WebProjectUniversity.Core\\obj\\",
+        "outputPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
