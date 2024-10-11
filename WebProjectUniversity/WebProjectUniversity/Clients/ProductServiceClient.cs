@@ -12,12 +12,13 @@ namespace WebProjectUniversity.UI.Clients
         public ProductServiceClient(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            _httpClient.BaseAddress= new Uri("http://host.docker.internal:8080/");
         }
 
         #region Product
         public async Task<List<ProductResponse>> GetAllProductsAsync()
         {
-            var response = await _httpClient.GetAsync("http://localhost:8080/api/product");
+            var response = await _httpClient.GetAsync("http://host.docker.internal:8080/api/product");
             var jsonString = await response.Content.ReadAsStringAsync();
 
             // Log the JSON for inspection

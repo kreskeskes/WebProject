@@ -15,14 +15,14 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService:/app:rw
-      - C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity:/src:rw
-      - C:\Users\Kristy\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\Kristy\.nuget\packages:/.nuget/packages:ro
-      - C:\Users\Kristy\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
-      - C:\Users\Kristy\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
-      - C:\Users\Kristy\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
-      - C:\Users\Kristy\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService:/app:rw
+      - C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity:/src:rw
+      - C:\Users\kristy\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\kristy\.nuget\packages:/.nuget/packages:ro
+      - C:\Users\kristy\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\kristy\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
       - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
       - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
@@ -49,14 +49,14 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity:/app:rw
-      - C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity:/src:rw
-      - C:\Users\Kristy\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\Kristy\.nuget\packages:/.nuget/packages:ro
-      - C:\Users\Kristy\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
-      - C:\Users\Kristy\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
-      - C:\Users\Kristy\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
-      - C:\Users\Kristy\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity:/app:rw
+      - C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity:/src:rw
+      - C:\Users\kristy\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\kristy\.nuget\packages:/.nuget/packages:ro
+      - C:\Users\kristy\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\kristy\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
       - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
       - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 

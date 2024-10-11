@@ -12,9 +12,14 @@ builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
 });
 
 
+
 builder.Services.AddHttpClient<ProductServiceClient>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:8081/"); // Update this URL to your ProductService API base address
+    client.BaseAddress = new Uri("http://host.docker.internal:5000/"); // Change to your correct API URL
+})
+.ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+{
+    ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true // Ignore SSL errors (for development only!)
 });
 
 
@@ -29,7 +34,6 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers(); // Map attribute-routed controllers
 });
-
 
 
 app.Run();

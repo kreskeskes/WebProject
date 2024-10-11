@@ -17,6 +17,7 @@ namespace WebProjectUniversity.UI.Controllers
         [HttpGet("Index")]
         public async Task<IActionResult> Index()
         {
+            
             var products = await _productServiceClient.GetAllProductsAsync();
             return View(products);
         }

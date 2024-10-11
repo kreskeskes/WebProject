@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6dsx2RKeMk3+n8Z8Uysst8LAJjACT5vEVHoD0BNETqE=",
+  "Hash": "tnRHu4dM8Q+T90gFXxRcNeXaCJroIvRSXmCLjQ82ZCQ=",
   "Source": "ProductService",
   "BasePath": "_content/ProductService",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "ProductService\\wwwroot",
       "Source": "ProductService",
-      "ContentRoot": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\wwwroot\\",
       "BasePath": "_content/ProductService",
       "Pattern": "**"
     }

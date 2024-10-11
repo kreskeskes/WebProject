@@ -14,6 +14,8 @@ services:
       - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1400;Database=WebProjectUniDatabase;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=MyPass@word;
     depends_on:
       - db
+    networks:  
+      - productsnetwork
 
   webprojectuniversity.ui:
     image: ${DOCKER_REGISTRY-}webprojectuniversityui
@@ -25,6 +27,10 @@ services:
       - "8085:5001" 
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - productservice
+    networks:  
+      - productsnetwork
 
   db:
     image: mcr.microsoft.com/mssql/server:2019-latest
@@ -36,8 +42,14 @@ services:
       - "1400:1433"
     volumes:
       - sqlserverdata:/var/opt/mssql
+    networks:  
+      - productsnetwork
 
 volumes:
   sqlserverdata:
 
+
+networks:
+  productsnetwork:
+    driver: "bridge"
 

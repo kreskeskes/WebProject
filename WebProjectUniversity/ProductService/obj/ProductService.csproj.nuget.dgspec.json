@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj": {}
+    "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj": {
+    "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
+        "projectUniqueName": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
         "projectName": "ProductService",
-        "projectPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
-        "packagesPath": "C:\\Users\\Kristy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\obj\\",
+        "projectPath": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\ProductService.csproj",
+        "packagesPath": "C:\\Users\\kristy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kristy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
