@@ -59,7 +59,7 @@ namespace ProductService.DTO
                        Sizes == other.Sizes &&
                        Colors == other.Colors &&
                        Brand == other.Brand &&
-                       Equals(this.Categories, other.Categories) &&
+                       Categories.SequenceEqual(other.Categories) &&
                        ProductType == other.ProductType &&
                        ProductTypeId == other.ProductTypeId &&
                        CategoryIds == other.CategoryIds &&

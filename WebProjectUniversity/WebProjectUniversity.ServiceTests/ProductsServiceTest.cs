@@ -99,11 +99,6 @@ namespace WebProjectUniversity.ServiceTests
 
             productResponse_expected.Id = productResponse.Id;
 
-            //Act
-            Func<Task> action = async () =>
-            {
-                await _productsAdderService.AddProduct(productAddRequest);
-            };
 
 
             //Assert

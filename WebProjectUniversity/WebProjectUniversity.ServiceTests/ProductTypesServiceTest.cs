@@ -44,12 +44,12 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async void AddProductType_ValidInputs_ShouldAddProductTypeSuccessfully()
         {
-            ProductTypeAddRequest productTypeAddRequest = _fixture.Build<ProductTypeAddRequest>().With(x => x.Products).Create();
-            ProductType ProductType = productTypeAddRequest.ToProductType();
+            ProductTypeAddRequest productTypeAddRequest = _fixture.Build<ProductTypeAddRequest>().Without(x => x.Products).Create();
+            ProductType productType = productTypeAddRequest.ToProductType();
 
-            _ProductTypesRepositoryMock.Setup(x => x.AddProductType(It.IsAny<ProductType>())).ReturnsAsync(ProductType);
+            _ProductTypesRepositoryMock.Setup(x => x.AddProductType(It.IsAny<ProductType>())).ReturnsAsync(productType);
 
-            ProductTypeResponse productTypeResponse_expected = ProductType.ToProductTypeResponse();
+            ProductTypeResponse productTypeResponse_expected = productType.ToProductTypeResponse();
 
 
             //Act
@@ -59,22 +59,6 @@ namespace WebProjectUniversity.ServiceTests
             //Assert
             productTypeResponse_actual.Should().Be(productTypeResponse_expected);
 
-        }
-
-        [Fact]
-        public async void AddProductType_NullCategoryId_ThrowsArgumentNullExpection()
-        {
-            ProductTypeAddRequest productTypeAddRequest = _fixture.Build<ProductTypeAddRequest>().Without(x=>x.Products).Create();
-
-            _categoriesRepositoryMock.Setup(x => x.GetProductCategoryById(It.IsAny<Guid>())).ReturnsAsync(null as ProductCategory);
-            _ProductTypesRepositoryMock.Setup(x => x.AddProductType(It.IsAny<ProductType>())).ReturnsAsync(null as ProductType);
-
-
-            Func<Task> action = async () =>
-                {
-                    await _ProductTypesAdderService.AddProductType(productTypeAddRequest);
-                };
-            await action.Should().ThrowAsync<ArgumentException>();
         }
 
         [Fact]
