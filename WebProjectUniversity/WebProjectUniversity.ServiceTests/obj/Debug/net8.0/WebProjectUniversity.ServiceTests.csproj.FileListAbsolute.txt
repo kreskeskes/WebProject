@@ -132,7 +132,6 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\appsettings.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\productCategories.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\products.json
-C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\productSubcategories.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\ProductService.exe
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\WebProjectUniversity.ServiceTests.deps.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\WebProjectUniversity.ServiceTests.runtimeconfig.json
@@ -281,3 +280,4 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\Ocelot.dll
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\productTypes.json

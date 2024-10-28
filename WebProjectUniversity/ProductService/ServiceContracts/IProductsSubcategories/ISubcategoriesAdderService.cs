@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductService.ServiceContracts.IProductsSubcategories
+namespace ProductService.ServiceContracts.IProductsProductTypes
 {
-	public interface ISubcategoriesAdderService
+	public interface IProductTypesAdderService
 	{
 		/// <summary>
-		/// Adds a subcategory to the list of subcategories
+		/// Adds a ProductType to the list of ProductTypes
 		/// </summary>
-		/// <param name="productSubcategoryAddRequest">The subcategory to add</param>
-		/// <returns>The just added subcategory</returns>
-		Task<ProductSubcategoryResponse> AddProductSubcategory(ProductSubcategoryAddRequest productSubcategoryAddRequest);
+		/// <param name="productTypeAddRequest">The ProductType to add</param>
+		/// <returns>The just added ProductType</returns>
+		Task<ProductTypeResponse> AddProductType(ProductTypeAddRequest productTypeAddRequest);
 	}
 }

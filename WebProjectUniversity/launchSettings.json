@@ -3,9 +3,13 @@
     "Docker Compose": {
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "webprojectuniversity.ui",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/products/index",
       "serviceActions": {
         "productservice": "StartDebugging",
-        "webprojectuniversity.ui": "StartDebugging"
+        "webprojectuniversity.ui": "StartDebugging",
+        "db": "StartWithoutDebugging"
       }
     }
   }

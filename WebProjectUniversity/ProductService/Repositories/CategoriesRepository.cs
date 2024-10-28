@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductService.Data;
-using ProductService.Entities;
 using ProductService.RepositoryContracts;
 using System;
 using System.Collections.Generic;
@@ -36,12 +35,12 @@ namespace ProductService.Repositories
 
         public async Task<List<ProductCategory>?> GetAllProductCategories()
         {
-            return await _db.ProductCategories.Include(c => c.ProductSubcategories).ToListAsync();
+            return await _db.ProductCategories.Include(c => c.Products).ToListAsync();
         }
 
         public async Task<ProductCategory> GetProductCategoryById(Guid? categoryId)
         {
-            return await _db.ProductCategories.Include(c => c.ProductSubcategories).FirstOrDefaultAsync(x => x.Id == categoryId);
+            return await _db.ProductCategories.Include(c => c.Products).FirstOrDefaultAsync(x => x.Id == categoryId);
         }
 
         public async Task<ProductCategory> UpdateProductCategory(ProductCategory productCategory)
@@ -51,7 +50,7 @@ namespace ProductService.Repositories
             if (matchingCategory != null)
             {
                 matchingCategory.Name = productCategory.Name;
-                matchingCategory.ProductSubcategories = productCategory.ProductSubcategories;
+                matchingCategory.Products = productCategory.Products;
             }
 
             await _db.SaveChangesAsync();

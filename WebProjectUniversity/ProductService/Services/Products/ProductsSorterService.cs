@@ -1,5 +1,4 @@
 ﻿using ProductService.DTO;
-using ProductService.Entities;
 using ProductService.Enums;
 using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProducts;

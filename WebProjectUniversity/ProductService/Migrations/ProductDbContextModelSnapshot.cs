@@ -22,7 +22,7 @@ namespace ProductService.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ProductService.Entities.Product", b =>
+            modelBuilder.Entity("Product", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,15 +36,25 @@ namespace ProductService.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Color")
+                    b.Property<string>("CategoryIds")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Colors")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Length")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Materials")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -54,23 +64,22 @@ namespace ProductService.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.Property<string>("ProductCategoryIds")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("ProductSubcategoryId")
-                        .IsRequired()
+                    b.Property<Guid>("ProductTypeId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Sizes")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Styles")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductSubcategoryId");
+                    b.HasIndex("ProductTypeId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
 
                     b.HasData(
                         new
@@ -78,32 +87,70 @@ namespace ProductService.Migrations
                             Id = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3"),
                             AgeGenderGroup = 0,
                             Brand = "CoolBrand",
-                            Color = "Black",
+                            CategoryIds = "[\"78c27d10-b5ec-435d-ae90-60211124db26\",\"b75f9050-7a85-4d1e-bd86-63e1fa4bdb54\"]",
+                            Colors = "[\"Black\",\"White\"]",
                             Description = "A cool graphic t-shirt.",
+                            Length = "Regular",
+                            Materials = "{\"Cotton\":50.0,\"Polyester\":50.0}",
                             Name = "Graphic Tee",
                             Price = 29.99m,
-                            ProductCategoryIds = "[\"b75f9050-7a85-4d1e-bd86-63e1fa4bdb54\",\"f4d38c7a-14d2-4f2c-8738-df1d6b57c4bc\"]",
-                            ProductSubcategoryId = new Guid("7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35"),
-                            Sizes = "[3,4]"
+                            ProductTypeId = new Guid("7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35"),
+                            Sizes = "[3,4]",
+                            Styles = "[\"Casual\",\"Streetwear\"]"
                         },
                         new
                         {
                             Id = new Guid("4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9"),
                             AgeGenderGroup = 1,
                             Brand = "Fashionista",
-                            Color = "Red",
+                            CategoryIds = "[\"78c27d10-b5ec-435d-ae90-60211124db26\",\"b75f9050-7a85-4d1e-bd86-63e1fa4bdb54\"]",
+                            Colors = "[\"Red\",\"Blue\"]",
                             Description = "A stylish summer dress.",
+                            Length = "Knee-length",
+                            Materials = "{\"Cotton\":20.0,\"Silk\":80.0}",
                             Name = "Summer Dress",
                             Price = 49.99m,
-                            ProductCategoryIds = "[\"b75f9050-7a85-4d1e-bd86-63e1fa4bdb54\"]",
-                            ProductSubcategoryId = new Guid("15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43"),
-                            Sizes = "[2,3]"
+                            ProductTypeId = new Guid("15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43"),
+                            Sizes = "[2,3]",
+                            Styles = "[\"Elegant\",\"Casual\"]"
+                        },
+                        new
+                        {
+                            Id = new Guid("e884afb9-b3b5-40b4-9776-cdafeb392382"),
+                            AgeGenderGroup = 1,
+                            Brand = "Elegant Designs",
+                            CategoryIds = "[\"f5c8a789-1234-4abc-9def-456789012345\"]",
+                            Colors = "[\"Gold\",\"Silver\"]",
+                            Description = "Beautifully crafted gold earrings for special occasions.",
+                            Length = "N/A",
+                            Materials = "{\"Gold\":70.0,\"Silver\":30.0}",
+                            Name = "Elegant Necklace",
+                            Price = 79.99m,
+                            ProductTypeId = new Guid("efd580ad-6076-4008-a2bc-03ff97507bb6"),
+                            Sizes = "[9]",
+                            Styles = "[\"Elegant\",\"Formal\"]"
+                        },
+                        new
+                        {
+                            Id = new Guid("2dd55f91-1655-42d6-9c2b-7f1a1bfa6184"),
+                            AgeGenderGroup = 1,
+                            Brand = "Daily Chic",
+                            CategoryIds = "[\"f5c8a789-1234-4abc-9def-456789012345\"]",
+                            Colors = "[\"Rose Gold\",\"White\"]",
+                            Description = "Simple and stylish stud earrings for everyday wear.",
+                            Length = "N/A",
+                            Materials = "{\"Rose Gold\":50.0,\"Plastic\":50.0}",
+                            Name = "Casual Stud Earrings",
+                            Price = 29.99m,
+                            ProductTypeId = new Guid("28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7"),
+                            Sizes = "[9]",
+                            Styles = "[\"Casual\",\"Everyday\"]"
                         });
                 });
 
-            modelBuilder.Entity("ProductService.Entities.ProductCategory", b =>
+            modelBuilder.Entity("ProductCategory", b =>
                 {
-                    b.Property<Guid?>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -129,55 +176,35 @@ namespace ProductService.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3"),
-                            Name = "Graphic Tee"
+                            Id = new Guid("f5c8a789-1234-4abc-9def-456789012345"),
+                            Name = "Jewelry"
                         },
                         new
                         {
-                            Id = new Guid("4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9"),
-                            Name = "Summer Dress"
+                            Id = new Guid("78c27d10-b5ec-435d-ae90-60211124db26"),
+                            Name = "Summer clothing"
                         });
                 });
 
             modelBuilder.Entity("ProductService.Entities.ProductProductCategory", b =>
                 {
+                    b.Property<Guid>("ProductCategoryId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
+                    b.HasKey("ProductCategoryId", "ProductId");
 
-                    b.HasKey("ProductId", "CategoryId");
+                    b.HasIndex("ProductId");
 
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("ProductProductCategory");
-
-                    b.HasData(
-                        new
-                        {
-                            ProductId = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3"),
-                            CategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54")
-                        },
-                        new
-                        {
-                            ProductId = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3"),
-                            CategoryId = new Guid("f4d38c7a-14d2-4f2c-8738-df1d6b57c4bc")
-                        },
-                        new
-                        {
-                            ProductId = new Guid("4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9"),
-                            CategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54")
-                        });
+                    b.ToTable("ProductProductCategories");
                 });
 
-            modelBuilder.Entity("ProductService.Entities.ProductSubcategory", b =>
+            modelBuilder.Entity("ProductType", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
@@ -187,46 +214,52 @@ namespace ProductService.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("ProductSubcategories", (string)null);
+                    b.ToTable("ProductTypes", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = new Guid("7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35"),
-                            CategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"),
-                            Name = "T-Shirts"
+                            Name = "T-Shirt"
                         },
                         new
                         {
                             Id = new Guid("15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43"),
-                            CategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"),
-                            Name = "Dresses"
+                            Name = "Dress"
+                        },
+                        new
+                        {
+                            Id = new Guid("28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7"),
+                            Name = "Earrings"
+                        },
+                        new
+                        {
+                            Id = new Guid("efd580ad-6076-4008-a2bc-03ff97507bb6"),
+                            Name = "Necklace"
                         });
                 });
 
-            modelBuilder.Entity("ProductService.Entities.Product", b =>
+            modelBuilder.Entity("Product", b =>
                 {
-                    b.HasOne("ProductService.Entities.ProductSubcategory", "ProductSubcategory")
-                        .WithMany()
-                        .HasForeignKey("ProductSubcategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                    b.HasOne("ProductType", "ProductType")
+                        .WithMany("Products")
+                        .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ProductSubcategory");
+                    b.Navigation("ProductType");
                 });
 
             modelBuilder.Entity("ProductService.Entities.ProductProductCategory", b =>
                 {
-                    b.HasOne("ProductService.Entities.ProductCategory", "ProductCategory")
+                    b.HasOne("ProductCategory", "ProductCategory")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("ProductCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProductService.Entities.Product", "Product")
-                        .WithMany("ProductCategories")
+                    b.HasOne("Product", "Product")
+                        .WithMany("Categories")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -236,26 +269,18 @@ namespace ProductService.Migrations
                     b.Navigation("ProductCategory");
                 });
 
-            modelBuilder.Entity("ProductService.Entities.ProductSubcategory", b =>
+            modelBuilder.Entity("Product", b =>
                 {
-                    b.HasOne("ProductService.Entities.ProductCategory", "Category")
-                        .WithMany("ProductSubcategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Category");
+                    b.Navigation("Categories");
                 });
 
-            modelBuilder.Entity("ProductService.Entities.Product", b =>
+            modelBuilder.Entity("ProductCategory", b =>
                 {
-                    b.Navigation("ProductCategories");
+                    b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("ProductService.Entities.ProductCategory", b =>
+            modelBuilder.Entity("ProductType", b =>
                 {
-                    b.Navigation("ProductSubcategories");
-
                     b.Navigation("Products");
                 });
 #pragma warning restore 612, 618

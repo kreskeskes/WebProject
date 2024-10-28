@@ -1,32 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ProductService.Entities;
 using System.ComponentModel.DataAnnotations;
 
-
-namespace ProductService.Entities
+public class ProductCategory
 {
-	public class ProductCategory
-	{
-		[Key]
-		public Guid? Id { get; set; }
+    [Key]
+    public Guid Id { get; set; }
 
-		[Required]
-		[StringLength(50)]
-		public string Name { get; set; }
+    [Required]
+    [StringLength(50)]
+    public string Name { get; set; }
 
-		public ICollection<ProductSubcategory>? ProductSubcategories { get; set; } = new List<ProductSubcategory>();
-
-        public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
-
-
-        public override bool Equals(object? obj)
-        {
-			if (obj is ProductCategory other)
-			{
-				return other.Id== this.Id&&other.Name==this.Name&&Equals(this.ProductSubcategories, other.ProductSubcategories);
-			}
-			return false;
-
-        }
-    }
+    // Many-to-many relationship with Product
+    public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
 }

@@ -4,10 +4,14 @@
 }
 
 <div class="page-content">
-    <div>
-        <a asp-controller="products" asp-action="addproduct">Add New Product</a>
+    <div class="grid-container-element">
+        <div class="grid-child-element">
+            <h1>Product Details</h1>
+        </div>
+        <div class="grid-child-element">
+            <a asp-controller="products" class="btn btn-green" asp-action="addproduct">Add new product</a>
+        </div>
     </div>
-    <h1>Product Details</h1>
     <div class="box-container">
         @foreach (ProductResponse product in Model)
         {

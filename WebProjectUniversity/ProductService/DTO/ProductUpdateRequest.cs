@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProductService.Entities;
 using ProductService.Enums;
 
 
@@ -33,20 +32,24 @@ namespace ProductService.DTO
 
 		[Required]
 		[StringLength(30)]
-		public string Color { get; set; }
+		public List<string> Colors { get; set; }
 
 		[Required]
 		[StringLength(50)]
 		public string Brand { get; set; }
 
-		[Required]
-		public List<ProductProductCategory> ProductCategories { get; set; }
+        public Dictionary<string, float> Materials { get; set; } = new Dictionary<string, float>();
 
-		[Required]
-		public Guid? ProductSubcategoryId { get; set; }
+        public List<string> Styles { get; set; } = new List<string>();
 
+        public string? Length { get; set; }
 
-		[Required]
+        [Required]
+        public Guid ProductTypeId { get; set; }
+
+		public List<Guid> CategoryIds {  get; set; }
+
+        [Required]
 		public AgeGenderGroup AgeGenderGroup { get; set; }
 
 
@@ -58,12 +61,15 @@ namespace ProductService.DTO
 				Description = Description,
 				Price = Price,
 				Sizes = Sizes,
-				Color = Color,
+				Colors = Colors,
 				Brand = Brand,
-				ProductCategories = ProductCategories,
-				ProductSubcategoryId = ProductSubcategoryId,
+                ProductTypeId= ProductTypeId,
+				CategoryIds=CategoryIds,
 				AgeGenderGroup = AgeGenderGroup,
 				Id = Id,
+				Length = Length,
+				Materials = Materials,
+				Styles = Styles,
 			
 			};
 		}

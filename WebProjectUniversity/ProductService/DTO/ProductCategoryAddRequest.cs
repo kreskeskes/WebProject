@@ -15,8 +15,8 @@ namespace ProductService.DTO
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
-
-        public ICollection<ProductSubcategory> ProductSubcategories { get; set; } = new List<ProductSubcategory>();
+        // Many-to-many relationship with Product
+        public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
 
 
         public ProductCategory ToProductCategory()
@@ -24,7 +24,7 @@ namespace ProductService.DTO
             return new ProductCategory()
             {
                 Name = Name,
-                ProductSubcategories = ProductSubcategories,
+                Products=Products,
             };
         }
     }

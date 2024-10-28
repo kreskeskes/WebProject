@@ -10,7 +10,9 @@ namespace ProductService.Enums
 	{
 		Men,
 		Women,
-		Unisex,
-		Kids
+		UnisexAdults,
+		Boys,
+		Girls,
+		UnisexKids
 	}
 }

@@ -1,5 +1,4 @@
-﻿using ProductService.Entities;
-using ProductService.RepositoryContracts;
+﻿using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProducts;
 using System;
 using System.Collections.Generic;

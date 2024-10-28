@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductService.Data;
-using ProductService.Entities;
 using ProductService.RepositoryContracts;
 using System;
 using System.Collections.Generic;
@@ -35,7 +34,7 @@ namespace ProductService.Repositories
 
 		public async Task<List<Product>?> GetAllProducts()
 		{
-			return await _db.Products.Include(p => p.ProductCategories).Include(p => p.ProductSubcategory).ToListAsync();
+			return await _db.Products.Include(p => p.ProductType).Include(p => p.Categories).ToListAsync();
 		}
 
 		public async Task<List<Product>> GetFilteredProducts(Expression<Func<Product, bool>> predicate)
@@ -49,7 +48,7 @@ namespace ProductService.Repositories
 
 		public async Task<Product>? GetProductByProductId(Guid? productId)
 		{
-			return await _db.Products.Include(p => p.ProductCategories).Include(p => p.ProductSubcategory).FirstOrDefaultAsync(temp => temp.Id == productId);
+			return await _db.Products.Include(p => p.ProductType).Include(p => p.Categories).FirstOrDefaultAsync(temp => temp.Id == productId);
 		}
 
 		public async Task<Product> UpdateProduct(Product product)
@@ -58,15 +57,20 @@ namespace ProductService.Repositories
 
 			if (matchingProduct != null)
 			{
-				matchingProduct.ProductSubcategoryId = product.ProductSubcategoryId;
+				matchingProduct.ProductType = product.ProductType;
 				matchingProduct.Brand = product.Brand;
-				matchingProduct.ProductCategories = product.ProductCategories;
-				matchingProduct.Color = product.Color;
+				matchingProduct.Categories = product.Categories;
+				matchingProduct.Colors = product.Colors;
 				matchingProduct.Description = product.Description;
 				matchingProduct.Sizes = product.Sizes;
 				matchingProduct.Price = product.Price;
 				matchingProduct.AgeGenderGroup = product.AgeGenderGroup;
 				matchingProduct.Name = product.Name;
+				matchingProduct.Materials = product.Materials;
+				matchingProduct.Styles= product.Styles;
+				matchingProduct.Length= product.Length;
+                matchingProduct.CategoryIds = product.CategoryIds;
+				matchingProduct.ProductTypeId = product.ProductTypeId;
 
 				await _db.SaveChangesAsync();
 				return matchingProduct;

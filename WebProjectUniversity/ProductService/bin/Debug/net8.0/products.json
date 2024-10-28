@@ -5,14 +5,17 @@
     "Description": "A cool graphic t-shirt.",
     "Price": 29.99,
     "Sizes": [ "M", "L" ],
-    "Color": "Black",
     "Brand": "CoolBrand",
-    "ProductCategoryIds": [ // Updated to reflect IDs
-      "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54",
-      "f4d38c7a-14d2-4f2c-8738-df1d6b57c4bc"
-    ],
-    "ProductSubcategoryId": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35",
-    "AgeGenderGroup": "Men"
+    "AgeGenderGroup": "Men",
+    "Colors": [ "Black", "White" ],
+    "Materials": {
+      "Cotton": 50.0,
+      "Polyester": 50.0
+    },
+    "Styles": [ "Casual", "Streetwear" ],
+    "Length": "Regular",
+    "ProductTypeId": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35",
+    "CategoryIds": [ "78C27D10-B5EC-435D-AE90-60211124DB26", "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54" ]
   },
   {
     "Id": "4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9",
@@ -20,12 +23,55 @@
     "Description": "A stylish summer dress.",
     "Price": 49.99,
     "Sizes": [ "S", "M" ],
-    "Color": "Red",
     "Brand": "Fashionista",
-    "ProductCategoryIds": [ // Updated to reflect IDs
-      "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"
-    ],
-    "ProductSubcategoryId": "15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43",
-    "AgeGenderGroup": "Women"
+    "AgeGenderGroup": "Women",
+    "Colors": [ "Red", "Blue" ],
+    "Materials": {
+      "Cotton": 20.0,
+      "Silk": 80.0
+    },
+    "Styles": [ "Elegant", "Casual" ],
+    "Length": "Knee-length",
+    "ProductTypeId": "15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43",
+    "CategoryIds": [ "78C27D10-B5EC-435D-AE90-60211124DB26", "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54" ]
+
+  },
+
+  {
+    "Id": "E884AFB9-B3B5-40B4-9776-CDAFEB392382",
+    "Name": "Elegant Necklace",
+    "Description": "Beautifully crafted gold earrings for special occasions.",
+    "Price": 79.99,
+    "Sizes": [ "OneSize" ],
+    "Brand": "Elegant Designs",
+    "AgeGenderGroup": "Women",
+    "Colors": [ "Gold", "Silver" ],
+    "Materials": {
+      "Gold": 70.0,
+      "Silver": 30.0
+    },
+    "Styles": [ "Elegant", "Formal" ],
+    "Length": "N/A",
+    "ProductTypeId": "EFD580AD-6076-4008-A2BC-03FF97507BB6",
+    "CategoryIds": [ "f5c8a789-1234-4abc-9def-456789012345" ]
+  },
+  {
+    "Id": "2DD55F91-1655-42D6-9C2B-7F1A1BFA6184",
+    "Name": "Casual Stud Earrings",
+    "Description": "Simple and stylish stud earrings for everyday wear.",
+    "Price": 29.99,
+    "Sizes": [ "OneSize" ],
+    "Brand": "Daily Chic",
+    "AgeGenderGroup": "Women",
+    "Colors": [ "Rose Gold", "White" ],
+    "Materials": {
+      "Rose Gold": 50.0,
+      "Plastic": 50.0
+    },
+    "Styles": [ "Casual", "Everyday" ],
+    "Length": "N/A",
+    "ProductTypeId": "28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7",
+    "CategoryIds": [ "f5c8a789-1234-4abc-9def-456789012345" ]
+
   }
 ]

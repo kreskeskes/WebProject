@@ -1,5 +1,4 @@
 ﻿using ProductService.DTO;
-using ProductService.Entities;
 using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProducts;
 using System;
@@ -12,73 +11,76 @@ using System.Xml.Linq;
 
 namespace ProductService.Services.Products
 {
-	public class ProductsGetterService : IProductsGetterService
-	{
-		private readonly IProductsRepository _productsRepository;
+    public class ProductsGetterService : IProductsGetterService
+    {
+        private readonly IProductsRepository _productsRepository;
 
-		public ProductsGetterService(IProductsRepository productsRepository)
-		{
-			_productsRepository = productsRepository;
-		}
+        public ProductsGetterService(IProductsRepository productsRepository)
+        {
+            _productsRepository = productsRepository;
+        }
 
-		public async Task<List<ProductResponse>?> GetAllProducts()
-		{
-			List<Product>? products = await _productsRepository.GetAllProducts();
-			return products?.Select(x => x.ToProductResponse()).ToList();
-		}
+        public async Task<List<ProductResponse>?> GetAllProducts()
+        {
+            List<Product>? products = await _productsRepository.GetAllProducts();
+            return products?.Select(x => x.ToProductResponse()).ToList();
+        }
 
-		public async Task<List<ProductResponse>> GetFilteredProducts(string? searchBy, string? searchString)
-		{
-			List<Product>? products;
+        public async Task<List<ProductResponse>> GetFilteredProducts(string? searchBy, string? searchString)
+        {
+            List<Product>? products;
 
-			products = searchBy switch
-			{
-				nameof(ProductResponse.Name) =>
-				await _productsRepository.GetFilteredProducts
-				(temp => temp.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase)),
+            products = searchBy switch
+            {
+                nameof(ProductResponse.Name) =>
+                await _productsRepository.GetFilteredProducts
+                (temp => temp.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase)),
+
+                nameof(ProductResponse.Brand) =>
+                await _productsRepository.GetFilteredProducts
+                (temp => temp.Brand.Contains(searchString, StringComparison.OrdinalIgnoreCase)),
+
+                nameof(ProductResponse.Colors) =>
+                await _productsRepository.GetFilteredProducts
+                (temp => temp.Colors.Contains(searchString)),
+
+                nameof(ProductResponse.ProductType) =>
+                await _productsRepository.GetFilteredProducts
+                (temp => temp.ProductType.Name.Contains(searchString)),
+
+                nameof(ProductResponse.Categories) =>
+                await _productsRepository.GetFilteredProducts
+                (temp => temp.Categories.Any(x => x.ProductCategory.Name.Contains(searchString))),
+
+                nameof(ProductResponse.Materials.Keys) =>
+                await _productsRepository.GetFilteredProducts
+                (temp => temp.Materials.Keys.Contains(searchString)),
 
 
-				nameof(ProductResponse.Brand) =>
-				await _productsRepository.GetFilteredProducts
-				(temp => temp.Brand.Contains(searchString)),
+                _ => await _productsRepository.GetAllProducts()
 
-				nameof(ProductResponse.ProductCategories) =>
-				await _productsRepository.GetFilteredProducts
-				(temp => temp.ProductCategories.Any(temp=>temp.ProductCategory.Name.Contains(searchString))),
+            };
+            return products.Select(x => x.ToProductResponse()).ToList();
+        }
 
-				nameof(ProductResponse.Color) =>
-				await _productsRepository.GetFilteredProducts
-				(temp => temp.Color.Contains(searchString)),
-
-				nameof(ProductResponse.ProductSubcategory) =>
-				await _productsRepository.GetFilteredProducts
-				(temp => temp.ProductSubcategory.Name.Contains(searchString)),
-
-
-				_ => await _productsRepository.GetAllProducts()
-
-			};
-			return products.Select(x => x.ToProductResponse()).ToList();
-		}
-
-		public async Task<ProductResponse>? GetProductByProductId(Guid productId)
-		{
-			if (productId != null)
-			{
-				Product? product = await _productsRepository.GetProductByProductId(productId);
-				if (product != null)
-				{
-					return product.ToProductResponse();
-				}
-				else
-				{
-					return null;
-				}
-			}
-			else
-			{
-				return null;
-			}
-		}
-	}
+        public async Task<ProductResponse>? GetProductByProductId(Guid productId)
+        {
+            if (productId != null)
+            {
+                Product? product = await _productsRepository.GetProductByProductId(productId);
+                if (product != null)
+                {
+                    return product.ToProductResponse();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
 }

@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductService.ServiceContracts.IProductsSubcategories
+namespace ProductService.ServiceContracts.IProductsProductTypes
 {
-    public interface ISubcategoriesUpdaterService
+    public interface IProductTypesUpdaterService
 	{/// <summary>
 	 /// 
 	 /// </summary>
 	 /// <param name="productUpdateRequest"></param>
 	 /// <returns></returns>
-		Task<ProductResponse> UpdateProductSubcategory(ProductUpdateRequest productUpdateRequest);
+		Task<ProductTypeResponse> UpdateProductType(ProductTypeUpdateRequest productTypeUpdateRequest);
 	}
 }

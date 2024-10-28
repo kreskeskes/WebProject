@@ -22,11 +22,20 @@ builder.Services.AddHttpClient<ProductServiceClient>(client =>
     ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true // Ignore SSL errors (for development only!)
 });
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 
 var app = builder.Build();
 
-
+app.UseCors("AllowAllOrigins");
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseStaticFiles();

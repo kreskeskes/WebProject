@@ -1,16 +1,13 @@
 using AutoFixture;
 using FluentAssertions;
 using Moq;
-using ServiceContracts.Enums;
+using ProductService.DTO;
+using ProductService.Enums;
+using ProductService.RepositoryContracts;
+using ProductService.ServiceContracts.IProducts;
+using ProductService.Services.Products;
 using System.Linq.Expressions;
-using WebProjectUniversity.Core.Domain.Entities;
-using WebProjectUniversity.Core.Domain.Entities.ProductFolder;
-using WebProjectUniversity.Core.Domain.RepositoryContracts;
-using WebProjectUniversity.Core.DTO;
-using WebProjectUniversity.Core.Service;
-using WebProjectUniversity.Core.Service.Products;
-using WebProjectUniversity.Core.ServiceContracts.ICategories;
-using WebProjectUniversity.Core.ServiceContracts.IProducts;
+
 
 namespace WebProjectUniversity.ServiceTests
 {
@@ -67,14 +64,7 @@ namespace WebProjectUniversity.ServiceTests
 
         public async Task AddProduct_ProductName_ToBeNull()
         {
-            //Arrange
-            ProductCategory productCategory = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory category = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory).With(x => x.CategoryId, productCategory.Id).Create();
-
-            List<ProductProductCategory> productProductCategories = new List<ProductProductCategory>() { category };
-
-            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().With(temp => temp.Name, null as string).With(x => x.ProductCategories, productProductCategories).Create();
+            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().With(x => x.Name, null as string).Create();
 
             Product product = productAddRequest.ToProduct();
 
@@ -95,14 +85,8 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task AddProduct_ValidProductToBeAdded()
         {
-            //Arrange
-            ProductCategory productCategory = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
 
-            ProductProductCategory category = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory).With(x => x.CategoryId, productCategory.Id).Create();
-
-            List<ProductProductCategory> productProductCategories = new List<ProductProductCategory>() { category };
-
-            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().With(x => x.ProductCategories, productProductCategories).Create();
+            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().Create();
 
 
             Product product = productAddRequest.ToProduct();
@@ -153,19 +137,8 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task DeleteProduct_ProductDeleted()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
             //create product that would be added to our mocked repository
-            Product product = _fixture.Build<Product>().Without(x => x.ProductSubcategory)
-    .With(p => p.ProductCategories, productProductCategories1).Create();
+            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
             ProductResponse productResponse = product.ToProductResponse();
 
@@ -195,19 +168,9 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task GetAllProducts_ReturnsAFewProducts()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-            Product product1 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories1).Without(x => x.ProductSubcategory).Create();
-            Product product2 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2).Without(x => x.ProductSubcategory).Create();
-            Product product3 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2).Without(x => x.ProductSubcategory).Create();
+            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product3 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
 
 
@@ -240,18 +203,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task GetProductById_ValidIdReturnsProduct()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-            Product product = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2)
-    .Without(p => p.ProductSubcategory).Create();
+            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
             ProductResponse productResponse_expected = product.ToProductResponse();
 
@@ -268,21 +220,10 @@ namespace WebProjectUniversity.ServiceTests
 
         [Fact]
         public async Task GetFilteredProducts_SearchByNull_SearchStringNull_ReturnsLikeGetAllProducts()
+
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-            Product product1 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2)
-    .Without(p => p.ProductSubcategory).Create();
-            Product product2 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories1)
-    .Without(p => p.ProductSubcategory).Create();
+            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
             List<Product> products = new List<Product>() { product1, product2 };
 
@@ -306,22 +247,13 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task GetFilteredProducts_SearchByProductName_SearchStringValid_ToBeSuccessful()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
+            
 
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
+            Product product1 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n1" as string).Without(x => x.Categories).Without(x => x.ProductType).Create();
 
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
+            Product product2 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n2" as string).Without(x => x.Categories).Without(x => x.ProductType).Create();
 
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-            Product product1 = _fixture.Build<Product>().With(x => x.ProductCategories, productProductCategories2).With(temp => temp.Name, "Pill n1" as string).Without(p => p.ProductSubcategory).Create();
-
-            Product product2 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n2" as string).With(x => x.ProductCategories, productProductCategories1).Without(p => p.ProductSubcategory).Create();
-
-            Product product3 = _fixture.Build<Product>().With(temp => temp.Name, "n3" as string).With(x => x.ProductCategories, productProductCategories2).Without(p => p.ProductSubcategory).Create();
+            Product product3 = _fixture.Build<Product>().With(temp => temp.Name, "n3" as string).Without(x => x.Categories).Without(x => x.ProductType).Create();
 
 
             List<Product> products = new List<Product>() { product1, product2, product3 };
@@ -363,18 +295,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task UpdateProduct_InvalidProductId_ToBeArgumentException()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-            ProductUpdateRequest productUpdateRequest = _fixture.Build<ProductUpdateRequest>().With(temp => temp.Id, Guid.Empty).Without(x=>x.ProductSubcategoryId).With(x=>x.ProductCategories, productProductCategories2).Create();
+            ProductUpdateRequest productUpdateRequest = _fixture.Build<ProductUpdateRequest>().With(temp => temp.Id, Guid.Empty).Create();
 
             Func<Task> action = async () =>
             {
@@ -385,22 +306,9 @@ namespace WebProjectUniversity.ServiceTests
         }
 
         [Fact]
-        public async Task UpdateProduct_ValidUpdateDetault_ToBeSuccessful()
+        public async Task UpdateProduct_ValidUpdateDetails_ToBeSuccessful()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-
-            Product product = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2)
-    .Without(p => p.ProductSubcategory).Create();
+            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
             ProductResponse productResponse = product.ToProductResponse();
 
@@ -409,7 +317,7 @@ namespace WebProjectUniversity.ServiceTests
             productUpdateRequest.Name = "changed Name";
 
             Product productAfterAssigningNewValues = productUpdateRequest.ToProduct();
-            ProductResponse prodcutResposeAfterAssigningNewValues_expected = productAfterAssigningNewValues.ToProductResponse();
+            ProductResponse productResposeAfterAssigningNewValues_expected = productAfterAssigningNewValues.ToProductResponse();
 
 
             //Mock
@@ -421,7 +329,7 @@ namespace WebProjectUniversity.ServiceTests
 
             ProductResponse productResponse_actual = await _productsUpdaterService.UpdateProduct(productUpdateRequest);
 
-            prodcutResposeAfterAssigningNewValues_expected.Should().Be(productResponse_actual);
+            productResposeAfterAssigningNewValues_expected.Should().Be(productResponse_actual);
         }
 
         #endregion
@@ -431,23 +339,9 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task SortProduct_ValidOutput_ToReturnSortedProducts()
         {
-            ProductCategory productCategory1 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
+            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
-            ProductCategory productCategory2 = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(x => x.ProductSubcategories).Create();
-
-            ProductProductCategory productProductcategory1 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory1).With(x => x.CategoryId, productCategory1.Id).Create();
-
-            ProductProductCategory productProductcategory2 = _fixture.Build<ProductProductCategory>().Without(x => x.Product).Without(x => x.ProductId).With(x => x.ProductCategory, productCategory2).With(x => x.CategoryId, productCategory2.Id).Create();
-
-            List<ProductProductCategory> productProductCategories1 = new List<ProductProductCategory>() { productProductcategory1 };
-            List<ProductProductCategory> productProductCategories2 = new List<ProductProductCategory>() { productProductcategory1, productProductcategory2 };
-
-
-            Product product1 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2)
-    .Without(p => p.ProductSubcategory).Create();
-
-            Product product2 = _fixture.Build<Product>().With(p => p.ProductCategories, productProductCategories2)
-    .Without(p => p.ProductSubcategory).Create();
+            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
 
             List<Product> products = new List<Product>() { product1, product2 };
 

@@ -1,52 +1,54 @@
 ﻿using ProductService.Enums;
-using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using ProductService.Entities;
 
-namespace ProductService.Entities
+public class Product
 {
-	public class Product
-	{
-		[Key]
-		public Guid Id { get; set; }
+    [Key]
+    public Guid Id { get; set; }
 
-		[Required]
-		[StringLength(100)]
-		public string Name { get; set; }
+    [Required]
+    [StringLength(100)]
+    public string Name { get; set; }
 
-		[Required]
-		[StringLength(500)]
-		public string Description { get; set; }
+    [Required]
+    [StringLength(500)]
+    public string Description { get; set; }
 
-		[Required]
-		[Column(TypeName = "decimal(18, 2)")]
-		public decimal Price { get; set; }
+    [Required]
+    [Column(TypeName = "decimal(18, 2)")]
+    public decimal Price { get; set; }
 
-		[Required]
-		public List<SizeOptions> Sizes { get; set; }
+    [Required]
+    public List<SizeOptions> Sizes { get; set; } = new List<SizeOptions>();
 
-		[Required]
-		[StringLength(30)]
-		public string Color { get; set; }
+    [Required]
+    [StringLength(50)]
+    public string Brand { get; set; }
 
-		[Required]
-		[StringLength(50)]
-		public string Brand { get; set; }
+    // Single reference to ProductType
+    [Required]
+    public Guid ProductTypeId { get; set; }
 
-        public List<ProductProductCategory> ProductCategories { get; set; } = new List<ProductProductCategory>();
+    [ForeignKey("ProductTypeId")]
+    public ProductType ProductType { get; set; }
 
-        public List<Guid> ProductCategoryIds { get; set; } = new List<Guid>(); 
+    // Many-to-many relationship with ProductCategory
+    public List<ProductProductCategory> Categories { get; set; } = new List<ProductProductCategory>();
+    // List of Category IDs
+    public List<Guid> CategoryIds { get; set; } = new List<Guid>();
 
-        // Foreign Key for ProductSubcategory
-        [Required]
-		public Guid? ProductSubcategoryId { get; set; }
+    [Required]
+    public AgeGenderGroup AgeGenderGroup { get; set; }
 
-		[ForeignKey("ProductSubcategoryId")]
-		public ProductSubcategory ProductSubcategory { get; set; }
+    [Required]
+    public List<string> Colors { get; set; } = new List<string>();
 
-		[Required]
-		public AgeGenderGroup AgeGenderGroup { get; set; }
+    [Required]
+    public Dictionary<string, float> Materials { get; set; } = new Dictionary<string, float>();
 
+    public List<string> Styles { get; set; } = new List<string>();
 
-	}
+    public string? Length { get; set; }
 }

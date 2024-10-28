@@ -4,6 +4,7 @@ namespace ProductService.Enums
 {
     public enum SizeOptions
     {
+        [Display(Name="2XS")]
         XXS,
         XS,
         S,
@@ -15,5 +16,7 @@ namespace ProductService.Enums
         XXXL,
         [Display(Name = "4XL")]
         XXXXL,
+        [Display(Name = "One Size")]
+        OneSize
     }
 }

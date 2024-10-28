@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using ProductService.Enums;
-using ProductService.Entities;
 
 
 
@@ -27,19 +26,27 @@ namespace ProductService.DTO
 
 		[Required]
 		[StringLength(30)]
-		public string Color { get; set; }
+		public List<string> Colors { get; set; }
 
-		[Required]
+        [Required]
+        public Dictionary<string, float> Materials { get; set; } = new Dictionary<string, float>();
+
+        public List<string> Styles { get; set; } = new List<string>();
+
+        public string? Length { get; set; }
+
+        [Required]
 		[StringLength(50)]
 		public string Brand { get; set; }
 
-		[Required]
-		public List<ProductProductCategory> ProductCategories { get; set; }
+        // Single reference to ProductType
+        [Required]
+        public Guid ProductTypeId { get; set; }
 
-		[Required]
-		public Guid ProductSubcategoryId { get; set; }
+        // Many-to-many relationship with ProductCategory
+        public List<Guid> CategoryIds { get; set; } = new List<Guid>();
 
-		[Required]
+        [Required]
 		public AgeGenderGroup AgeGenderGroup { get; set; }
 
 		public Product ToProduct()
@@ -50,12 +57,18 @@ namespace ProductService.DTO
 				Description = this.Description,
 				Price = this.Price,
 				Sizes = this.Sizes,
-				Color = this.Color,
+				Colors = this.Colors,
 				Brand = this.Brand,
-				ProductCategories = this.ProductCategories,
-				ProductSubcategoryId = this.ProductSubcategoryId,
-				AgeGenderGroup = this.AgeGenderGroup
+				ProductTypeId = this.ProductTypeId,
+				CategoryIds = this.CategoryIds,
+				AgeGenderGroup = this.AgeGenderGroup,
+				Length = this.Length,
+				Materials = this.Materials,
+				Styles = this.Styles,
+
 			};
+
+
 		}
 	}
 }

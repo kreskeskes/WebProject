@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using ProductService.Entities;
-using System.IdentityModel.Tokens.Jwt;
-using System.Text.Json;
-
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace ProductService.Data
 {
@@ -12,12 +11,12 @@ namespace ProductService.Data
     {
         public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
         {
-
         }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
-        public DbSet<ProductSubcategory> ProductSubcategories { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<ProductProductCategory> ProductProductCategories { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,43 +24,26 @@ namespace ProductService.Data
             base.OnModelCreating(modelBuilder);
 
 
-            // Configure many-to-many relationship
-            modelBuilder.Entity<ProductProductCategory>()
-                .HasKey(pp => new { pp.ProductId, pp.CategoryId });
-
+            modelBuilder.Entity<ProductProductCategory>().HasKey(pc => new { pc.ProductCategoryId, pc.ProductId });
 
             modelBuilder.Entity<ProductProductCategory>()
-           .HasOne(pp => pp.Product)
-           .WithMany(p => p.ProductCategories)
-           .HasForeignKey(pp => pp.ProductId);
+                .HasOne(x => x.Product)
+                .WithMany(x => x.Categories)
+                .HasForeignKey(x => x.ProductId);
 
             modelBuilder.Entity<ProductProductCategory>()
-           .HasOne(pp => pp.ProductCategory)
-           .WithMany(c => c.Products)
-           .HasForeignKey(pp => pp.CategoryId);
+            .HasOne(x => x.ProductCategory)
+            .WithMany(x => x.Products)
+            .HasForeignKey(x => x.ProductCategoryId); 
 
-            // Configure ProductCategory entity
+            // Configure ProductCategory table
             modelBuilder.Entity<ProductCategory>()
                 .ToTable("ProductCategories");
 
-            // Configure ProductSubcategory entity
-            modelBuilder.Entity<ProductSubcategory>()
-                .ToTable("ProductSubcategories")
-                .HasOne(p => p.Category)
-                .WithMany(c => c.ProductSubcategories)
-                .HasForeignKey(p => p.CategoryId)
-                .OnDelete(DeleteBehavior.Restrict); // Restrict delete behavior
+            // Configure ProductType table
+            modelBuilder.Entity<ProductType>()
+                .ToTable("ProductTypes");
 
-            // Configure Product entity
-            modelBuilder.Entity<Product>()
-                .ToTable("Products");
-
-            // Configure relationship for ProductSubcategory (if needed)
-            modelBuilder.Entity<Product>()
-                .HasOne(p => p.ProductSubcategory)
-                .WithMany() // No navigation property on ProductSubcategory side
-                .HasForeignKey(p => p.ProductSubcategoryId)
-                .OnDelete(DeleteBehavior.Restrict); // Restrict delete behavior
 
             // Seed data configuration
             var productCategoriesJson = File.ReadAllText("productCategories.json");
@@ -71,59 +53,35 @@ namespace ProductService.Data
                 modelBuilder.Entity<ProductCategory>().HasData(productCategories.Select(c => new
                 {
                     c.Id,
-                    c.Name,
+                    c.Name
                 }).ToArray());
             }
 
-            var productSubcategoriesJson = File.ReadAllText("productSubcategories.json");
+            modelBuilder.Entity<Product>()
+     .Property(p => p.Materials)
+     .HasConversion(
+         v => JsonConvert.SerializeObject(v), // Convert to JSON string for storage
+         v => string.IsNullOrEmpty(v) ? new Dictionary<string, float>() : JsonConvert.DeserializeObject<Dictionary<string, float>>(v) // Deserialize JSON string back to dictionary
+     );
 
-            var productSubcategories = JsonConvert.DeserializeObject<List<ProductSubcategory>>(productSubcategoriesJson);
-            if (productSubcategories != null)
+            var productTypesJson = File.ReadAllText("productTypes.json");
+            var productTypes = JsonConvert.DeserializeObject<List<ProductType>>(productTypesJson);
+            if (productTypes != null)
             {
-                modelBuilder.Entity<ProductSubcategory>().HasData(productSubcategories.Select(c => new
+                modelBuilder.Entity<ProductType>().HasData(productTypes.Select(c => new
                 {
                     c.Id,
-                    c.Name,
-                    c.CategoryId,
+                    c.Name
                 }).ToArray());
             }
 
             var productsJson = File.ReadAllText("products.json");
             var products = JsonConvert.DeserializeObject<List<Product>>(productsJson);
-
             if (products != null)
             {
-                modelBuilder.Entity<ProductCategory>().HasData(products.Select(p => new
-                {
-                    p.Id,
-                    p.Name,
-                    p.Description,
-                    p.Price,
-                    p.Color,
-                    p.Brand,
-                    p.ProductSubcategoryId,
-                    p.AgeGenderGroup,
-                    p.Sizes,
-                    p
-                }).ToArray());
-                foreach (var product in products)
-                {
-                    modelBuilder.Entity<Product>().HasData(product);
-                    foreach (var categoryId in product.ProductCategoryIds)
-                    {
-                        modelBuilder.Entity<ProductProductCategory>().HasData(new ProductProductCategory
-                        {
-                            ProductId = product.Id,
-                            CategoryId = categoryId,
-                        });
-                    }
-                }
-
+                modelBuilder.Entity<Product>().HasData(products);
             }
         }
-
-
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -131,7 +89,5 @@ namespace ProductService.Data
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WebProjectUniversityDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
-
     }
 }
-

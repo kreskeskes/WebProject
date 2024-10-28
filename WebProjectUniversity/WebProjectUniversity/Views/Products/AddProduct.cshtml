@@ -3,45 +3,261 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h3>Add Product</h3>
-<div class="box-container">
 
-    <h3>Add new product</h3>
-    <form asp-controller="products" asp-action="addproduct" method="post">
+@{
+    List<SizeOptions> sizeOptions = (List<SizeOptions>)ViewBag.SizeOptions;
+}
+<div class="page-content">
+    <div class="box-container">
+        <h3>Add new product</h3>
+        <form asp-controller="products" asp-action="addproduct" method="post">
 
-        <div class="form-field-group">
-            <div class="form-row">
-                <label asp-for="Name" class="form-label">Product Name</label>
-                <input asp-for="Name" class="form-input">
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label asp-for="Name" class="form-label">Product Name</label>
+                    <input asp-for="Name" class="form-input">
+                </div>
+                <span asp-validation-for="Name" class="text-red form-span"></span>
             </div>
-            <span asp-validation-for="Name" class="text-red form-span"></span>
-        </div>
 
-        <div class="form-field-group">
-            <div class="form-row">
-                <label asp-for="Price" class="form-label">Price</label>
-                <input asp-for="Price" class="form-input" size="30" required>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label asp-for="Price" class="form-label">Price</label>
+                    <input asp-for="Price" class="form-input" size="30" required>
+                </div>
+                <span asp-validation-for="Price" class="text-red form-span"></span>
             </div>
-            <span asp-validation-for="Price" class="text-red form-span"></span>
-        </div>
 
-        <div class="form-field-group">
-            <div class="form-row">
-                <label asp-for="AgeGenderGroup" class="form-label">Gender-Age Category</label>
-                <select asp-for="AgeGenderGroup" class="form-select" asp-items="ViewBag.AgeGenderGroups">
-                    <option value="">--Select age-gender category--</option>
-                </select>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label asp-for="AgeGenderGroup" class="form-label">Gender-Age Category</label>
+                    <select asp-for="AgeGenderGroup" class="classic" asp-items="ViewBag.AgeGenderGroups">
+                        <option value="">--Select age-gender category--</option>
+                    </select>
+                </div>
+                <span asp-validation-for="AgeGenderGroup" class="text-red form-span"></span>
             </div>
-            <span asp-validation-for="AgeGenderGroup" class="text-red form-span"></span>
-        </div>
 
-        <div class="form-field-group">
-            <div class="form-row">
-                <label asp-for="Brand" class="form-label">Brand</label>
-                <input asp-for="Brand" class="form-input" size="30" required>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <textarea asp-for="Description" class="form-input"></textarea>
+                </div>
+                <span asp-validation-for="Name" class="text-red form-span"></span>
             </div>
-            <span asp-validation-for="Brand" class="text-red form-span"></span>
-        </div>
 
-    </form>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label asp-for="Brand" class="form-label">Brand</label>
+                    <input asp-for="Brand" class="form-input" size="30" required>
+                </div>
+                <span asp-validation-for="Brand" class="text-red form-span"></span>
+            </div>
+
+            <div class="form-field-group">
+                <label class="form-label-less-bottom-spacing">Sizes</label>
+                <div class="form-row">
+                    <div>
+                        <ul class="size-options">
+                            @foreach (var size in sizeOptions)
+                            {
+                                <li>
+                                    @{
+                                        if (size.GetAttribute<DisplayAttribute>() != null)
+                                        {
+                                            string sizeLabel = size.GetAttribute<DisplayAttribute>().Name?.ToString();
+                                            <label>@sizeLabel</label>
+                                        }
+                                        else
+                                        {
+                                            <label>@size</label>
+
+                                        }
+                                    }
+                                    <input type="checkbox" id="@size.ToString()" name="@size" value="@size" />
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <span asp-validation-for="Sizes" class="text-red form-span"></span>
+            </div>
+
+            <div class="form-field-group">
+                <div class="form-row" style="display:block !important;">
+                    <label class="form-label">Product Categories</label>
+                    <div id="product-categories-container">
+                        <div class="product-category-select">
+                            @Html.DropDownList("SelectedProductCategory", ViewBag.ProductCategoriesList as List<SelectListItem>, "Select a category", new { @class = "form-control custom-dropdown", @id = "product-category-dropdown" })
+                            <button type="button" class="remove-category" style="display: none;">Remove</button>
+                        </div>
+                        <span asp-validation-for="CategoryIds" class="text-red form-span"></span>
+                    </div>
+                </div>
+                <div class="form-row" style="display:block !important;" id="ProductType-container" style="display: none;">
+                    <label class="form-label">Product ProductTypes</label>
+                    <div class="product-ProductType-select">
+                        <select id="ProductType-dropdown" class="form-control custom-dropdown">
+                            <option value="">Select a ProductType</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="ProductTypeId" class="text-red form-span"></span>
+                </div>
+                <a href="javascript:void(0);" id="add-more-categories">Add More?</a>
+            </div>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label class="form-label">Colors</label>
+                    <div id="colors-container" class="checkbox-container">
+                        @foreach (var color in ViewBag.ColorList)
+                        {
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="SelectedColors" value="@color.Value" id="color_@color.Value" class="form-checkbox">
+                                <label for="color_@color.Value" class="checkbox-label">
+                                    <span class="color-circle" style="background-color: @color.Value;"></span> @color.Text
+                                </label>
+                            </div>
+                        }
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="customColorCheckbox" class="form-checkbox">
+                            <label for="customColorCheckbox" class="checkbox-label">Custom Color</label>
+                        </div>
+                        <div id="custom-color-container">
+                            <div class="custom-color-container" style="display:none;">
+                                <input type="text" style="width:160px;" class="form-input" name="CustomColors[]" placeholder="Enter custom color">
+                                <button type="button" class="remove-custom-color-container" style="display: none;">Remove</button>
+                            </div>
+                            <a href="javascript:void(0);" id="add-more-custom-colors" style="display:none;">Add More?</a>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="Colors" class="text-red form-span"></span>
+            </div>
+        </form>
+    </div>
 </div>
+
+
+@section Scripts {
+    <script>
+        document.getElementById('add-more-categories').addEventListener('click', function () {
+            var container = document.getElementById('product-categories-container');
+            var selectTemplate = container.querySelector('.product-category-select').cloneNode(true);
+
+            // Reset the select element's value
+            selectTemplate.querySelector('select').value = '';
+
+            // Update the name attribute for the cloned select element
+            selectTemplate.querySelector('select').name = 'ProductCategories[' + container.children.length + ']';
+
+            // Display the remove button for the new selectTemplate
+            selectTemplate.querySelector('.remove-category').style.display = 'inline';
+
+            // Add event listener for the remove button
+            selectTemplate.querySelector('.remove-category').addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+
+            container.appendChild(selectTemplate);
+        });
+
+        // Add event listener for the initial remove button if it's visible
+        document.querySelectorAll('.remove-category').forEach(function (button) {
+            button.addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('customColorCheckbox').addEventListener('change', function () {
+            var customColorInput = document.getElementById('customColorInput');
+            if (this.checked) {
+                customColorInput.style.display = 'inline';
+            } else {
+                customColorInput.style.display = 'none';
+                customColorInput.value = ''; // Clear the custom color input when unchecked
+            }
+        });
+    </script>
+
+
+    <script>
+        document.getElementById('customColorCheckbox').addEventListener('change', function () {
+            var customColorContainer = document.getElementById('custom-color-container');
+            var addMoreLink = document.getElementById('add-more-custom-colors');
+            if (this.checked) {
+                customColorContainer.querySelector('.custom-color-container').style.display = 'block';
+                addMoreLink.style.display = 'inline';
+            } else {
+                customColorContainer.querySelectorAll('.custom-color-container').forEach(function (element) {
+                    element.style.display = 'none';
+                });
+                addMoreLink.style.display = 'none';
+                document.querySelectorAll('input[name="CustomColors[]"]').forEach(function (input) {
+                    input.value = '';
+                });
+            }
+        });
+
+        document.getElementById('add-more-custom-colors').addEventListener('click', function () {
+            var container = document.getElementById('custom-color-container');
+            var inputTemplate = container.querySelector('.custom-color-container').cloneNode(true);
+
+            // Reset the input element's value
+            inputTemplate.querySelector('input').value = '';
+
+            // Display the remove button for the new inputTemplate
+            inputTemplate.querySelector('.remove-custom-color-container').style.display = 'inline';
+
+            // Add event listener for the remove button
+            inputTemplate.querySelector('.remove-custom-color-container').addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+
+            container.appendChild(inputTemplate);
+        });
+
+        // Add event listener for the initial remove button if it's visible
+        document.querySelectorAll('.remove-custom-color-container').forEach(function (button) {
+            button.addEventListener('click', function () {
+                this.parentElement.remove();
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#product-category-dropdown').change(function () {
+                var categoryId = $(this).val();
+                console.log("Category ID selected:", categoryId); // Log the selected category ID for debugging
+                if (categoryId) {
+                    $.ajax({
+                        url: '@Url.Action("GetProductTypes", "Products")',
+                        type: 'GET',
+                        data: { categoryId: categoryId },
+                        success: function (data) {
+                            var ProductTypeDropdown = $('#ProductType-dropdown');
+                            ProductTypeDropdown.empty();
+                            ProductTypeDropdown.append('<option value="">Select a ProductType</option>');
+                            $.each(data, function (index, item) {
+                                ProductTypeDropdown.append($('<option>', {
+                                    value: item.value,
+                                    text: item.text
+                                }));
+                            });
+                            $('#ProductType-container').show();
+                        },
+                        error: function (xhr, status, error) {
+                            console.log("Error: " + error);
+                        }
+                    });
+                } else {
+                    $('#ProductType-dropdown').empty();
+                    $('#ProductType-dropdown').append('<option value="">Select a ProductType</option>');
+                    $('#ProductType-container').hide();
+                }
+            });
+        });
+    </script>
+}
+

@@ -19,7 +19,7 @@ namespace ProductService.DTO
         [StringLength(50)]
         public string Name { get; set; }
 
-        public ICollection<ProductSubcategory> ProductSubcategories { get; set; } = new List<ProductSubcategory>();
+        public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
 
         public ProductCategory ToProductCategory()
         {
@@ -27,7 +27,7 @@ namespace ProductService.DTO
             {
                 Name = Name,
                 Id = Id,
-                ProductSubcategories = ProductSubcategories
+                Products = Products
             };
         }
     }

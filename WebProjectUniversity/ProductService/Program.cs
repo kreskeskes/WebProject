@@ -8,10 +8,10 @@ using ProductService.Repositories;
 using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProducts;
 using ProductService.ServiceContracts.IProductsCategories;
-using ProductService.ServiceContracts.IProductsSubcategories;
+using ProductService.ServiceContracts.IProductsProductTypes;
 using ProductService.Services.Products;
 using ProductService.Services.ProductsCategories;
-using ProductService.Services.ProductsCategories.ProductSubcategories;
+using ProductService.Services.ProductsCategories.ProductTypes;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,7 +45,7 @@ builder.Services.AddCors(options =>
 
 
 builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
-builder.Services.AddScoped<ISubcategoriesRepository, SubcategoriesRepository>();
+builder.Services.AddScoped<IProductTypesRepository, ProductTypesRepository>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 
 
@@ -61,10 +61,10 @@ builder.Services.AddScoped<ICategoriesGetterService, CategoriesGetterService>();
 builder.Services.AddScoped<ICategoriesDeleterService, CategoriesDeleterService>();
 builder.Services.AddScoped<ICategoriesUpdaterService, CategoriesUpdaterService>();
 
-builder.Services.AddScoped<ISubcategoriesAdderService, SubcategoriesAdderService>();
-builder.Services.AddScoped<ISubcategoriesGetterService, SubcategoriesGetterService>();
-builder.Services.AddScoped<ISubcategoriesDeleterService, SubcategoriesDeleterService>();
-builder.Services.AddScoped<ISubcategoriesUpdaterService, SubcategoriesUpdaterService>();
+builder.Services.AddScoped<IProductTypesAdderService, ProductTypesAdderService>();
+builder.Services.AddScoped<IProductTypesGetterService, ProductTypesGetterService>();
+builder.Services.AddScoped<IProductTypesDeleterService, ProductTypesDeleterService>();
+builder.Services.AddScoped<IProductTypesUpdaterService, ProductTypesUpdaterService>();
 
 var app = builder.Build();
 

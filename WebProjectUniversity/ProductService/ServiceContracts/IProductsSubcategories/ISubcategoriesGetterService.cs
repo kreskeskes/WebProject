@@ -5,23 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductService.ServiceContracts.IProductsSubcategories
+namespace ProductService.ServiceContracts.IProductsProductTypes
 {
-	public interface ISubcategoriesGetterService
+	public interface IProductTypesGetterService
 	{
 
 		/// <summary>
-		/// Returns a list of subcategories
+		/// Returns a list of ProductTypes
 		/// </summary>
 		/// <returns></returns>
-		Task<List<ProductSubcategoryResponse>> GetAlProductlSubcategories();
+		Task<List<ProductTypeResponse>> GetAllProductTypes();
 
 
 		/// <summary>
-		/// Returns a subcategory based on given Id
+		/// Returns a ProductType based on given Id
 		/// </summary>
-		/// <param name="id">Guid based on which to retrieve subcategory</param>
+		/// <param name="id">Guid based on which to retrieve ProductType</param>
 		/// <returns></returns>
-		Task<ProductSubcategoryResponse> GetProductSubcategoryResponseById(Guid id);
-	}
+		Task<ProductTypeResponse> GetProductTypeResponseById(Guid id);
+
+    }
 }

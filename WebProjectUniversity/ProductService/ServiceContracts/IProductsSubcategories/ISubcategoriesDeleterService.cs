@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductService.ServiceContracts.IProductsSubcategories
+namespace ProductService.ServiceContracts.IProductsProductTypes
 {
-	public interface ISubcategoriesDeleterService
+	public interface IProductTypesDeleterService
 	{
 		/// <summary>
-		/// Deletes the specified subcategory based on subcategoryId
+		/// Deletes the specified ProductType based on ProductTypeId
 		/// </summary>
-		/// <param name="subcategoryId">subcategoryId of the subcategory that has to be deleted</param>
+		/// <param name="ProductTypeId">ProductTypeId of the ProductType that has to be deleted</param>
 		/// <returns>True if deletion is successful</returns>
-		Task<bool> DeleteProductSubcategory(Guid? subcategoryId);
+		Task<bool> DeleteProductType(Guid ProductTypeId);
 	}
 }

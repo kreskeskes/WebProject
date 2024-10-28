@@ -1,5 +1,4 @@
 ﻿using ProductService.DTO;
-using ProductService.Entities;
 using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProducts;
 using System;
@@ -34,15 +33,18 @@ namespace ProductService.Services.Products
 
 					if (foundProduct != null)
 					{
-						foundProduct.ProductSubcategoryId = productUpdateRequest.ProductSubcategoryId;
+						foundProduct.ProductTypeId = productUpdateRequest.ProductTypeId;
 						foundProduct.Brand = productUpdateRequest.Brand;
 						foundProduct.AgeGenderGroup = productUpdateRequest.AgeGenderGroup;
-						foundProduct.Color = productUpdateRequest.Color;
-						foundProduct.ProductCategories = productUpdateRequest.ProductCategories;
+						foundProduct.Colors = productUpdateRequest.Colors;
 						foundProduct.Sizes = productUpdateRequest.Sizes;
 						foundProduct.Description = productUpdateRequest.Description;
 						foundProduct.Price = productUpdateRequest.Price;
 						foundProduct.Name = productUpdateRequest.Name;
+						foundProduct.Materials= productUpdateRequest.Materials;
+						foundProduct.Length= productUpdateRequest.Length;
+						foundProduct.CategoryIds = productUpdateRequest.CategoryIds;
+						foundProduct.Styles = productUpdateRequest.Styles;
 
 						Product productAfterUpdation = await _productsRepository.UpdateProduct(foundProduct);
 						return productAfterUpdation.ToProductResponse();

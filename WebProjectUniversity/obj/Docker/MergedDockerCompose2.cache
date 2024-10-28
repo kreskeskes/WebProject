@@ -1,8 +1,26 @@
-name: dockercompose13167211217014698919
+name: dockercompose5600240734978962439
 services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Express
+      SA_PASSWORD: MyPass@word
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      productsnetwork: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1400"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: sqlserverdata
+        target: /var/opt/mssql
+        volume: {}
   productservice:
     build:
-      context: C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity
+      context: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity
       dockerfile: ProductService/Dockerfile
       args:
         BUILD_CONFIGURATION: Debug
@@ -12,6 +30,10 @@ services:
         com.microsoft.visual-studio.project-name: ProductService
       target: base
     container_name: ProductService_1
+    depends_on:
+      db:
+        condition: service_started
+        required: true
     entrypoint:
       - dotnet
       - --roll-forward
@@ -20,9 +42,10 @@ services:
       - --wait
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "8080"
-      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_HTTPS_PORTS: "5001"
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ConnectionStrings__DefaultConnection: Server=host.docker.internal,1400;Database=WebProjectUniDatabase;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=MyPass@word;
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: ""
     image: productservice:dev
@@ -32,8 +55,16 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     networks:
-      default: null
+      productsnetwork: null
     ports:
+      - mode: ingress
+        target: 5000
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 5001
+        published: "8081"
+        protocol: tcp
       - mode: ingress
         target: 8080
         protocol: tcp
@@ -43,46 +74,157 @@ services:
     tty: true
     volumes:
       - type: bind
-        source: C:\Users\Kristy\AppData\Roaming\Microsoft\UserSecrets
+        source: C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets
         target: /home/app/.microsoft/usersecrets
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\AppData\Roaming\ASP.NET\Https
+        source: C:\Users\kristy\AppData\Roaming\ASP.NET\Https
         target: /home/app/.aspnet/https
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService
+        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService
         target: /app
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity
+        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity
         target: /src
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\vsdbg\vs2017u5
+        source: C:\Users\kristy\vsdbg\vs2017u5
         target: /remote_debugger
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\.nuget\packages
+        source: C:\Users\kristy\.nuget\packages
         target: /.nuget/packages
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\AppData\Roaming\ASP.NET\Https
+        source: C:\Users\kristy\AppData\Roaming\ASP.NET\Https
         target: /root/.aspnet/https
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Kristy\AppData\Roaming\Microsoft\UserSecrets
+        source: C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0
+        target: /VSTools
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload
+        target: /HotReloadAgent
+        read_only: true
+        bind:
+          create_host_path: true
+  webprojectuniversity.ui:
+    build:
+      context: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity
+      dockerfile: WebProjectUniversity/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Debug
+        LAUNCHING_FROM_VS: "true"
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebProjectUniversity.UI
+      target: base
+    container_name: WebProjectUniversity.UI
+    depends_on:
+      productservice:
+        condition: service_started
+        required: true
+    entrypoint:
+      - dotnet
+      - --roll-forward
+      - Major
+      - /VSTools/DistrolessHelper/DistrolessHelper.dll
+      - --wait
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_HTTPS_PORTS: "5001"
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: webprojectuniversityui:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/bin/Debug/net8.0/WebProjectUniversity.UI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      productsnetwork: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "8084"
+        protocol: tcp
+      - mode: ingress
+        target: 5001
+        published: "8085"
+        protocol: tcp
+      - mode: ingress
+        target: 8084
+        protocol: tcp
+      - mode: ingress
+        target: 8085
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\AppData\Roaming\ASP.NET\Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\vsdbg\vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\.nuget\packages
+        target: /.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\AppData\Roaming\ASP.NET\Https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\kristy\AppData\Roaming\Microsoft\UserSecrets
         target: /root/.microsoft/usersecrets
         read_only: true
         bind:
@@ -100,5 +242,9 @@ services:
         bind:
           create_host_path: true
 networks:
-  default:
-    name: dockercompose13167211217014698919_default
+  productsnetwork:
+    name: dockercompose5600240734978962439_productsnetwork
+    driver: bridge
+volumes:
+  sqlserverdata:
+    name: dockercompose5600240734978962439_sqlserverdata

@@ -1,5 +1,4 @@
 ﻿using ProductService.DTO;
-using ProductService.Entities;
 using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProductsCategories;
 using System;
@@ -30,7 +29,7 @@ namespace ProductService.Services.ProductsCategories
 
                     if (foundCategory != null)
                     {
-                        foundCategory.ProductSubcategories = productCategoryUpdateRequest.ProductSubcategories;
+                        foundCategory.Products = productCategoryUpdateRequest.Products;
                         foundCategory.Name = productCategoryUpdateRequest.Name;
                         ProductCategory productCategoryAfterUpdation = await _categoriesRepository.UpdateProductCategory(foundCategory);
 

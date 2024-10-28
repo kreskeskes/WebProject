@@ -10,7 +10,6 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\appsettings.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\productCategories.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\products.json
-C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\productSubcategories.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\ProductService.exe
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\ProductService.deps.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\ProductService.runtimeconfig.json
@@ -149,3 +148,4 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\Ocelot.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\ProductService.staticwebassets.runtime.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\productTypes.json

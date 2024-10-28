@@ -159,7 +159,6 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\appsettings.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\productCategories.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\products.json
-C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\productSubcategories.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\ProductService.deps.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\ProductService.runtimeconfig.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\ProductService.exe
@@ -292,7 +291,6 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\Ocelot.dll
-C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\WebProjectUniversity.UI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\WebProjectUniversity.UI.staticwebassets.runtime.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\staticwebassets.development.json
@@ -302,3 +300,4 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebProjectUniversity.UI.props
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\scopedcss\bundle\WebProjectUniversity.UI.styles.css
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\productTypes.json

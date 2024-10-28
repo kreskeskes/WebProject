@@ -15,7 +15,8 @@ namespace ProductService.DTO
 
         public string Name { get; set; }
 
-        public ICollection<ProductSubcategory> ProductSubcategories { get; set; } = new List<ProductSubcategory>();
+        public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
+
 
 
 
@@ -25,7 +26,7 @@ namespace ProductService.DTO
             {
                 return other.Id == this.Id &&
                     other.Name == this.Name
-                    && this.ProductSubcategories.SequenceEqual(other.ProductSubcategories);
+                    && this.Products.SequenceEqual(other.Products);
             }
             return false;
         }
@@ -43,14 +44,9 @@ namespace ProductService.DTO
         {
             return new ProductCategoryResponse
             {
-                Id = productCategory.Id ?? Guid.Empty,
+                Id = productCategory.Id,
                 Name = productCategory.Name,
-                ProductSubcategories = productCategory.ProductSubcategories?.Select(ps => new ProductSubcategory
-                {
-                    Id = ps.Id,
-                    Name = ps.Name,
-                    CategoryId = ps.CategoryId
-                }).ToList()
+                Products =productCategory.Products
             };
         }
     }
