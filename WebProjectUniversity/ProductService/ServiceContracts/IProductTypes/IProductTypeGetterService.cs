@@ -24,5 +24,12 @@ namespace ProductService.ServiceContracts.IProductsProductTypes
 		/// <returns></returns>
 		Task<ProductTypeResponse> GetProductTypeResponseById(Guid id);
 
+
+		/// <summary>
+		/// Returns a List of ProductTypeResponse based on given CategoryId
+		/// </summary>
+		/// <param name="categoryId">CategoryId to search for a product type by</param>
+		/// <returns></returns>
+		Task<List<ProductTypeResponse>> GetProductTypeByCategoryId(Guid categoryId);
     }
 }

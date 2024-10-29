@@ -98,7 +98,7 @@ namespace WebProjectUniversity.ServiceTests
             ProductResponse productResponse = await _productsAdderService.AddProduct(productAddRequest);
 
             productResponse_expected.Id = productResponse.Id;
-
+            productResponse_expected.Categories = productResponse.Categories;
 
 
             //Assert

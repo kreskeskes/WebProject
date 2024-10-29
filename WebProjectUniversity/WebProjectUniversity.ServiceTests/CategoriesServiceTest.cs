@@ -100,7 +100,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task DeleteProductCategory_CategoryDeletedSuccessfully()
         {
-            ProductCategory productCategory = _fixture.Build<ProductCategory>().Without(temp => temp.Products).Create();
+            ProductCategory productCategory = _fixture.Build<ProductCategory>().Without(temp => temp.Products).Without(x=>x.ProductTypes).Create();
 
             _categoriesRepositoryMock.Setup(x => x.DeleteProductCategoryBytId(It.IsAny<Guid>())).ReturnsAsync(true);
             _categoriesRepositoryMock.Setup(x => x.GetProductCategoryById(It.IsAny<Guid>())).ReturnsAsync(productCategory);
@@ -124,7 +124,7 @@ namespace WebProjectUniversity.ServiceTests
         }
 
         [Fact]
-        public async Task GetProductCategoryByProductId_ProductNotFound()
+        public async Task GetProductCategoryById_ProductNotFound()
         {
             Guid id = Guid.NewGuid();
 
@@ -136,9 +136,9 @@ namespace WebProjectUniversity.ServiceTests
         }
 
         [Fact]
-        public async Task GetProductCategoryByProductId_ProductCategoryFound()
+        public async Task GetProductCategoryById_ProductCategoryFound()
         {
-            ProductCategory productCategory = _fixture.Build<ProductCategory>().Without(x => x.Products).Create();
+            ProductCategory productCategory = _fixture.Build<ProductCategory>().Without(x => x.Products).Without(temp => temp.Products).Without(x => x.ProductTypes).Create();
             ProductCategoryResponse productCategoryResponse_expected = productCategory.ToProductCategoryResponse();
 
             _categoriesRepositoryMock.Setup(x => x.GetProductCategoryById(It.IsAny<Guid>())).ReturnsAsync(productCategory);

@@ -35,12 +35,12 @@ namespace ProductService.Repositories
 
         public async Task<List<ProductCategory>?> GetAllProductCategories()
         {
-            return await _db.ProductCategories.Include(c => c.Products).ToListAsync();
+            return await _db.ProductCategories.Include(c => c.Products).Include(c=>c.ProductTypes).ToListAsync();
         }
 
         public async Task<ProductCategory> GetProductCategoryById(Guid? categoryId)
         {
-            return await _db.ProductCategories.Include(c => c.Products).FirstOrDefaultAsync(x => x.Id == categoryId);
+            return await _db.ProductCategories.Include(c => c.Products).Include(c => c.ProductTypes).FirstOrDefaultAsync(x => x.Id == categoryId);
         }
 
         public async Task<ProductCategory> UpdateProductCategory(ProductCategory productCategory)

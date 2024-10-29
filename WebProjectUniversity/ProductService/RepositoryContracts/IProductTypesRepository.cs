@@ -49,5 +49,13 @@ namespace ProductService.RepositoryContracts
         /// <returns>Updated product ProductType</returns>
         Task<ProductType> UpdateProductType(ProductType ProductType);
 
+
+        /// <summary>
+        /// Returns an list of ProductType objects based on given CategoryId
+        /// </summary>
+        /// <param name="categoryId">CategoryId based on which to get ProductType</param>
+        /// <returns>A list of ProductType objects that match with the given CategoryId</returns>
+        Task<List<ProductType>> GetProductTypeByCategoryId(Guid categoryId);
+
     }
 }
