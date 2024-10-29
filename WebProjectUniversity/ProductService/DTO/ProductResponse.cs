@@ -38,9 +38,6 @@ namespace ProductService.DTO
 
         public ProductType ProductType { get; set; } // Include ProductType information
 
-        // List of Category IDs
-        public List<Guid> CategoryIds { get; set; } = new List<Guid>();
-
         // Optionally include full ProductCategory details if needed
         public List<ProductProductCategory> Categories { get; set; } = new List<ProductProductCategory>();
 
@@ -62,7 +59,6 @@ namespace ProductService.DTO
                        Categories.SequenceEqual(other.Categories) &&
                        ProductType == other.ProductType &&
                        ProductTypeId == other.ProductTypeId &&
-                       CategoryIds == other.CategoryIds &&
                        AgeGenderGroup == other.AgeGenderGroup &&
                        Materials == other.Materials &&
                        Styles == other.Styles &&
@@ -89,10 +85,10 @@ namespace ProductService.DTO
                 Brand = Brand,
                 AgeGenderGroup = AgeGenderGroup,
                 ProductTypeId = ProductTypeId,
-                CategoryIds = CategoryIds,
                 Materials = Materials,
                 Length = Length,
                 Styles = Styles,
+
 
             };
         }
@@ -117,7 +113,6 @@ namespace ProductService.DTO
                 Colors = product.Colors,
                 Brand = product.Brand,
                 ProductTypeId = product.ProductTypeId,
-                CategoryIds = product.CategoryIds,
                 Length = product.Length,
                 Categories = product.Categories,
                 Materials = product.Materials,

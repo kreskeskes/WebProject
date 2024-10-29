@@ -36,8 +36,6 @@ public class Product
 
     // Many-to-many relationship with ProductCategory
     public List<ProductProductCategory> Categories { get; set; } = new List<ProductProductCategory>();
-    // List of Category IDs
-    public List<Guid> CategoryIds { get; set; } = new List<Guid>();
 
     [Required]
     public AgeGenderGroup AgeGenderGroup { get; set; }

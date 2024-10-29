@@ -2,21 +2,25 @@
   {
     "Id": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54",
     "Name": "Clothing",
-    "Products": []
+    "Products": [],
+    "ProductTypes": []
   },
   {
     "Id": "f4d38c7a-14d2-4f2c-8738-df1d6b57c4bc",
     "Name": "Accessories",
-    "Products": []
+    "Products": [],
+    "ProductTypes": []
   },
   {
     "Id": "f5c8a789-1234-4abc-9def-456789012345",
     "Name": "Jewelry",
-    "Products": []
+    "Products": [],
+    "ProductTypes": []
   },
   {
     "Id": "78C27D10-B5EC-435D-AE90-60211124DB26",
     "Name": "Summer clothing",
-    "Products": []
+    "Products": [],
+    "ProductTypes": []
   }
 ]

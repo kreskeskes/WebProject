@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProductService.Entities;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class ProductType
 {
@@ -11,4 +13,7 @@ public class ProductType
 
     // One-to-many relationship with Product
     public List<Product> Products { get; set; } = new List<Product>();
+
+    //Many-to-many relationship with Category
+    public List<ProductTypeProductCategory> ProductCategories { get; set; } = new List<ProductTypeProductCategory>();
 }

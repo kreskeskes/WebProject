@@ -20,7 +20,8 @@ namespace WebProjectUniversity.ServiceTests
         private readonly ICategoriesDeleterService _categoriesDeleterService;
         private readonly ICategoriesGetterService _categoriesGetterService;
         private readonly ICategoriesUpdaterService _categoriesUpdaterService;
-
+        
+        private readonly IProductsRepository _productsRepository;
         private readonly ICategoriesRepository _categoriesRepository;
         private readonly Mock<ICategoriesRepository> _categoriesRepositoryMock;
 
@@ -31,18 +32,19 @@ namespace WebProjectUniversity.ServiceTests
             _categoriesRepositoryMock = new Mock<ICategoriesRepository>();
             _categoriesRepository = _categoriesRepositoryMock.Object;
             _fixture = new Fixture();
+            _productsRepository= new Mock<IProductsRepository>().Object;
 
             _categoriesAdderService = new CategoriesAdderService(_categoriesRepository);
             _categoriesDeleterService = new CategoriesDeleterService(_categoriesRepository);
             _categoriesGetterService = new CategoriesGetterService(_categoriesRepository);
-            _categoriesUpdaterService = new CategoriesUpdaterService(_categoriesRepository);
+            _categoriesUpdaterService = new CategoriesUpdaterService(_categoriesRepository, _productsRepository);
         }
 
         #region AddProductCategory
         [Fact]
         public async Task AddProductCategory_CategoryNameToBeNull_ToThrowArgumentException()
         {
-            ProductCategoryAddRequest request = _fixture.Build<ProductCategoryAddRequest>().With(temp => temp.Name, null as string).Without(temp=>temp.Products).Create();
+            ProductCategoryAddRequest request = _fixture.Build<ProductCategoryAddRequest>().With(temp => temp.Name, null as string).Without(temp=>temp.ProductIds).Create();
 
             Func<Task> action = async () =>
             {
@@ -68,7 +70,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task AddProductCategory_ValidCategoryToAdd_ToBeSuccessful()
         {
-            ProductCategoryAddRequest addRequest = _fixture.Build<ProductCategoryAddRequest>().Without(temp => temp.Products).Create();
+            ProductCategoryAddRequest addRequest = _fixture.Build<ProductCategoryAddRequest>().Without(temp => temp.ProductIds).Create();
 
             ProductCategory productCategory = addRequest.ToProductCategory();
             ProductCategoryResponse productCategoryResponse_expected = productCategory.ToProductCategoryResponse();
@@ -163,7 +165,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task UpdateProductCategory_Invalid_ProductCategoryID_ToBeArgumentException()
         {
-            ProductCategoryUpdateRequest productCategoryUpdateRequest = _fixture.Build<ProductCategoryUpdateRequest>().With(x => x.Id, Guid.Empty).Without(x => x.Products).Create();
+            ProductCategoryUpdateRequest productCategoryUpdateRequest = _fixture.Build<ProductCategoryUpdateRequest>().With(x => x.Id, Guid.Empty).Without(x => x.ProductIds).Create();
 
             Func<Task> action = async () =>
             {
@@ -176,7 +178,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task UpdateProductCategory_Valid_ToBeSuccessful()
         {
-            ProductCategoryUpdateRequest productUpdateRequest = _fixture.Build<ProductCategoryUpdateRequest>().Without(temp => temp.Products).Create();
+            ProductCategoryUpdateRequest productUpdateRequest = _fixture.Build<ProductCategoryUpdateRequest>().Without(temp => temp.ProductIds).Create();
 
             ProductCategory productCategory = productUpdateRequest.ToProductCategory();
             ProductCategoryResponse productCategoryResponse_expected = productCategory.ToProductCategoryResponse();

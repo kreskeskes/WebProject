@@ -1,0 +1,22 @@
+[
+  {
+    "ProductTypeId": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35", // T-Shirt
+    "ProductCategoryId": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54" // Clothing
+  },
+  {
+    "ProductTypeId": "15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43", // Dress
+    "ProductCategoryId": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54" // Clothing
+  },
+  {
+    "ProductTypeId": "28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7", // Earrings
+    "ProductCategoryId": "f5c8a789-1234-4abc-9def-456789012345" // Jewelry
+  },
+  {
+    "ProductTypeId": "EFD580AD-6076-4008-A2BC-03FF97507BB6", // Necklace
+    "ProductCategoryId": "f5c8a789-1234-4abc-9def-456789012345" // Jewelry
+  },
+  {
+    "ProductTypeId": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35", // T-Shirt
+    "ProductCategoryId": "78C27D10-B5EC-435D-AE90-60211124DB26" // Summer clothing
+  }
+]

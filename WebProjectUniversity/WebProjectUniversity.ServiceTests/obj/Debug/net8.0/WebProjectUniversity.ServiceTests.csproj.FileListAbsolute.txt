@@ -281,3 +281,5 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\Ocelot.dll
 C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\productTypes.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\productProductCategory.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity.ServiceTests\bin\Debug\net8.0\productTypeProductCategory.json

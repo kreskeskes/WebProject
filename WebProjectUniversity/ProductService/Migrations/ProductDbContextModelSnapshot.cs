@@ -36,10 +36,6 @@ namespace ProductService.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("CategoryIds")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Colors")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -87,7 +83,6 @@ namespace ProductService.Migrations
                             Id = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3"),
                             AgeGenderGroup = 0,
                             Brand = "CoolBrand",
-                            CategoryIds = "[\"78c27d10-b5ec-435d-ae90-60211124db26\",\"b75f9050-7a85-4d1e-bd86-63e1fa4bdb54\"]",
                             Colors = "[\"Black\",\"White\"]",
                             Description = "A cool graphic t-shirt.",
                             Length = "Regular",
@@ -103,7 +98,6 @@ namespace ProductService.Migrations
                             Id = new Guid("4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9"),
                             AgeGenderGroup = 1,
                             Brand = "Fashionista",
-                            CategoryIds = "[\"78c27d10-b5ec-435d-ae90-60211124db26\",\"b75f9050-7a85-4d1e-bd86-63e1fa4bdb54\"]",
                             Colors = "[\"Red\",\"Blue\"]",
                             Description = "A stylish summer dress.",
                             Length = "Knee-length",
@@ -119,7 +113,6 @@ namespace ProductService.Migrations
                             Id = new Guid("e884afb9-b3b5-40b4-9776-cdafeb392382"),
                             AgeGenderGroup = 1,
                             Brand = "Elegant Designs",
-                            CategoryIds = "[\"f5c8a789-1234-4abc-9def-456789012345\"]",
                             Colors = "[\"Gold\",\"Silver\"]",
                             Description = "Beautifully crafted gold earrings for special occasions.",
                             Length = "N/A",
@@ -135,7 +128,6 @@ namespace ProductService.Migrations
                             Id = new Guid("2dd55f91-1655-42d6-9c2b-7f1a1bfa6184"),
                             AgeGenderGroup = 1,
                             Brand = "Daily Chic",
-                            CategoryIds = "[\"f5c8a789-1234-4abc-9def-456789012345\"]",
                             Colors = "[\"Rose Gold\",\"White\"]",
                             Description = "Simple and stylish stud earrings for everyday wear.",
                             Length = "N/A",
@@ -199,6 +191,75 @@ namespace ProductService.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductProductCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductCategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"),
+                            ProductId = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3")
+                        },
+                        new
+                        {
+                            ProductCategoryId = new Guid("78c27d10-b5ec-435d-ae90-60211124db26"),
+                            ProductId = new Guid("e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3")
+                        },
+                        new
+                        {
+                            ProductCategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54"),
+                            ProductId = new Guid("4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9")
+                        },
+                        new
+                        {
+                            ProductCategoryId = new Guid("f5c8a789-1234-4abc-9def-456789012345"),
+                            ProductId = new Guid("e884afb9-b3b5-40b4-9776-cdafeb392382")
+                        },
+                        new
+                        {
+                            ProductCategoryId = new Guid("f5c8a789-1234-4abc-9def-456789012345"),
+                            ProductId = new Guid("2dd55f91-1655-42d6-9c2b-7f1a1bfa6184")
+                        });
+                });
+
+            modelBuilder.Entity("ProductService.Entities.ProductTypeProductCategory", b =>
+                {
+                    b.Property<Guid>("ProductTypeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductCategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ProductTypeId", "ProductCategoryId");
+
+                    b.HasIndex("ProductCategoryId");
+
+                    b.ToTable("ProductTypeProductCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductTypeId = new Guid("7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35"),
+                            ProductCategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54")
+                        },
+                        new
+                        {
+                            ProductTypeId = new Guid("15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43"),
+                            ProductCategoryId = new Guid("b75f9050-7a85-4d1e-bd86-63e1fa4bdb54")
+                        },
+                        new
+                        {
+                            ProductTypeId = new Guid("28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7"),
+                            ProductCategoryId = new Guid("f5c8a789-1234-4abc-9def-456789012345")
+                        },
+                        new
+                        {
+                            ProductTypeId = new Guid("efd580ad-6076-4008-a2bc-03ff97507bb6"),
+                            ProductCategoryId = new Guid("f5c8a789-1234-4abc-9def-456789012345")
+                        },
+                        new
+                        {
+                            ProductTypeId = new Guid("7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35"),
+                            ProductCategoryId = new Guid("78c27d10-b5ec-435d-ae90-60211124db26")
+                        });
                 });
 
             modelBuilder.Entity("ProductType", b =>
@@ -244,7 +305,7 @@ namespace ProductService.Migrations
                     b.HasOne("ProductType", "ProductType")
                         .WithMany("Products")
                         .HasForeignKey("ProductTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ProductType");
@@ -269,6 +330,25 @@ namespace ProductService.Migrations
                     b.Navigation("ProductCategory");
                 });
 
+            modelBuilder.Entity("ProductService.Entities.ProductTypeProductCategory", b =>
+                {
+                    b.HasOne("ProductCategory", "ProductCategory")
+                        .WithMany("ProductTypes")
+                        .HasForeignKey("ProductCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProductType", "ProductType")
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductCategory");
+
+                    b.Navigation("ProductType");
+                });
+
             modelBuilder.Entity("Product", b =>
                 {
                     b.Navigation("Categories");
@@ -276,11 +356,15 @@ namespace ProductService.Migrations
 
             modelBuilder.Entity("ProductCategory", b =>
                 {
+                    b.Navigation("ProductTypes");
+
                     b.Navigation("Products");
                 });
 
             modelBuilder.Entity("ProductType", b =>
                 {
+                    b.Navigation("ProductCategories");
+
                     b.Navigation("Products");
                 });
 #pragma warning restore 612, 618

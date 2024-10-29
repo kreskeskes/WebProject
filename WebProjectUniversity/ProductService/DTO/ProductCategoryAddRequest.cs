@@ -16,7 +16,7 @@ namespace ProductService.DTO
         [StringLength(50)]
         public string Name { get; set; }
         // Many-to-many relationship with Product
-        public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
+        public List<Guid> ProductIds { get; set; } = new List<Guid>();
 
 
         public ProductCategory ToProductCategory()
@@ -24,7 +24,10 @@ namespace ProductService.DTO
             return new ProductCategory()
             {
                 Name = Name,
-                Products=Products,
+                Products = ProductIds.Select(productIds => new ProductProductCategory()
+                {
+                    ProductId = productIds,
+                }).ToList(),
             };
         }
     }

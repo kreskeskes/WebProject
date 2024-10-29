@@ -38,3 +38,5 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\obj\Debug\docke
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\obj\Debug\docker-c.35A3FFBA.Up2Date
 C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\bin\Debug\productTypes.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\bin\Debug\productProductCategory.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\bin\Debug\productTypeProductCategory.json

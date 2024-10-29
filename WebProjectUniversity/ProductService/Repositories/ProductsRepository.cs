@@ -69,7 +69,6 @@ namespace ProductService.Repositories
 				matchingProduct.Materials = product.Materials;
 				matchingProduct.Styles= product.Styles;
 				matchingProduct.Length= product.Length;
-                matchingProduct.CategoryIds = product.CategoryIds;
 				matchingProduct.ProductTypeId = product.ProductTypeId;
 
 				await _db.SaveChangesAsync();

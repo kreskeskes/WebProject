@@ -149,3 +149,5 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\Ocelot.dll
 C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\ProductService.staticwebassets.runtime.json
 C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\productTypes.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\productProductCategory.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService\bin\Debug\net8.0\productTypeProductCategory.json

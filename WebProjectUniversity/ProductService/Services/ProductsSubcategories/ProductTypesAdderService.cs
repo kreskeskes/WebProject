@@ -29,7 +29,7 @@ namespace ProductService.Services.ProductsCategories.ProductTypes
 
             }
 
-            if (productTypeAddRequest.Products == null)
+            if (productTypeAddRequest.ProductIds == null)
             {
                 throw new ArgumentException();
             }

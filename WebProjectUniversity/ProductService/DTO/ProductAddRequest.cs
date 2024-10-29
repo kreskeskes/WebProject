@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using ProductService.Enums;
+using ProductService.Entities;
+using Azure.Core;
 
 
 
@@ -43,7 +45,6 @@ namespace ProductService.DTO
         [Required]
         public Guid ProductTypeId { get; set; }
 
-        // Many-to-many relationship with ProductCategory
         public List<Guid> CategoryIds { get; set; } = new List<Guid>();
 
         [Required]
@@ -60,7 +61,10 @@ namespace ProductService.DTO
 				Colors = this.Colors,
 				Brand = this.Brand,
 				ProductTypeId = this.ProductTypeId,
-				CategoryIds = this.CategoryIds,
+				Categories = this.CategoryIds.Select(categoryId => new ProductProductCategory
+				{
+					ProductCategoryId = categoryId
+				}).ToList(),
 				AgeGenderGroup = this.AgeGenderGroup,
 				Length = this.Length,
 				Materials = this.Materials,

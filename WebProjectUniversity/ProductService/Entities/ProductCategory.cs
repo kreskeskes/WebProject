@@ -12,4 +12,7 @@ public class ProductCategory
 
     // Many-to-many relationship with Product
     public List<ProductProductCategory> Products { get; set; } = new List<ProductProductCategory>();
+
+    // Many-to-one relationship with ProductType
+    public List<ProductTypeProductCategory> ProductTypes { get; set; } = new List<ProductTypeProductCategory>();
 }

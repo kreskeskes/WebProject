@@ -22,7 +22,8 @@ namespace WebProjectUniversity.ServiceTests
         private readonly IProductTypesUpdaterService _ProductTypesUpdaterService;
         private readonly Mock<ICategoriesRepository> _categoriesRepositoryMock;
 
-        private readonly IProductTypesRepository _ProductTypesRepository;
+        private readonly IProductTypesRepository _productTypesRepository;
+        private readonly IProductsRepository _productsRepository;
         private readonly Mock<IProductTypesRepository> _ProductTypesRepositoryMock;
         private readonly IFixture _fixture;
 
@@ -32,19 +33,19 @@ namespace WebProjectUniversity.ServiceTests
 
             _ProductTypesRepositoryMock = new Mock<IProductTypesRepository>();
             _categoriesRepositoryMock = new Mock<ICategoriesRepository>();
-            _ProductTypesRepository = _ProductTypesRepositoryMock.Object;
-
-            _ProductTypesAdderService = new ProductTypesAdderService(_ProductTypesRepository, _categoriesRepositoryMock.Object);
-            _ProductTypesDeleterService = new ProductTypesDeleterService(_ProductTypesRepository);
-            _ProductTypesGetterService = new ProductTypesGetterService(_categoriesRepositoryMock.Object, _ProductTypesRepository);
-            _ProductTypesUpdaterService = new ProductTypesUpdaterService(_ProductTypesRepository);
+            _productTypesRepository = _ProductTypesRepositoryMock.Object;
+            _productsRepository= new Mock<IProductsRepository>().Object;
+            _ProductTypesAdderService = new ProductTypesAdderService(_productTypesRepository, _categoriesRepositoryMock.Object);
+            _ProductTypesDeleterService = new ProductTypesDeleterService(_productTypesRepository);
+            _ProductTypesGetterService = new ProductTypesGetterService(_categoriesRepositoryMock.Object, _productTypesRepository);
+            _ProductTypesUpdaterService = new ProductTypesUpdaterService(_productTypesRepository, _productsRepository);
         }
 
         #region AddProductType
         [Fact]
         public async void AddProductType_ValidInputs_ShouldAddProductTypeSuccessfully()
         {
-            ProductTypeAddRequest productTypeAddRequest = _fixture.Build<ProductTypeAddRequest>().Without(x => x.Products).Create();
+            ProductTypeAddRequest productTypeAddRequest = _fixture.Build<ProductTypeAddRequest>().Without(x => x.ProductIds).Create();
             ProductType productType = productTypeAddRequest.ToProductType();
 
             _ProductTypesRepositoryMock.Setup(x => x.AddProductType(It.IsAny<ProductType>())).ReturnsAsync(productType);
@@ -195,7 +196,7 @@ namespace WebProjectUniversity.ServiceTests
         public async void UpdateProductType_ValidProductTypeObject_UpdateSuccessful_ReturnsUpdatedObject()
         {
             ProductTypeUpdateRequest productTypeUpdateRequest = _fixture.Build<ProductTypeUpdateRequest>()
-                .Without(x => x.Products).Create();
+                .Without(x => x.ProductIds).Create();
 
             ProductType updatedProductType_expected = productTypeUpdateRequest.ToProductType();
 
@@ -212,7 +213,7 @@ namespace WebProjectUniversity.ServiceTests
         public async void UpdateProductType_NullId_UpdateFailed_ThrowsArgumentExpection()
         {
             ProductTypeUpdateRequest productTypeUpdateRequest = _fixture.Build<ProductTypeUpdateRequest>()
-     .Without(x => x.Products).With(x => x.Id, Guid.Empty).Create();
+     .Without(x => x.ProductIds).With(x => x.Id, Guid.Empty).Create();
 
             Func<Task> action = async () =>
             {

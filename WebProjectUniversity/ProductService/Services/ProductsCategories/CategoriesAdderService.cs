@@ -30,6 +30,11 @@ namespace ProductService.Services.ProductsCategories
                     ProductCategory categoryAdded = await _categoriesRepository.AddProductCategory(productCategory);
                     categoryAdded.Id = Guid.NewGuid();
 
+                    foreach(var product in categoryAdded.Products)
+                    {
+                        product.ProductCategoryId = categoryAdded.Id;
+                    }
+
                     if (categoryAdded.Id != Guid.Empty)
                     {
                         return categoryAdded.ToProductCategoryResponse();

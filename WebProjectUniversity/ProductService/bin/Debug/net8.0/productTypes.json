@@ -2,21 +2,25 @@
   {
     "Id": "7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35",
     "Name": "T-Shirt",
-    "Products": []
+    "Products": [],
+    "ProductCategories": []
   },
   {
     "Id": "15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43",
     "Name": "Dress",
-    "Products": []
+    "Products": [],
+    "ProductCategories": []
   },
   {
     "Id": "28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7",
     "Name": "Earrings",
-    "Products": []
+    "Products": [],
+    "ProductCategories": []
   },
   {
     "Id": "EFD580AD-6076-4008-A2BC-03FF97507BB6",
     "Name": "Necklace",
-    "Products": []
+    "Products": [],
+    "ProductCategories": []
   }
 ]

@@ -1,4 +1,5 @@
 ﻿using ProductService.DTO;
+using ProductService.Repositories;
 using ProductService.RepositoryContracts;
 using ProductService.ServiceContracts.IProductsProductTypes;
 using System;
@@ -13,10 +14,13 @@ namespace ProductService.Services.ProductsCategories.ProductTypes
     public class ProductTypesUpdaterService : IProductTypesUpdaterService
     {
         private readonly IProductTypesRepository _productTypesRepository;
+        private readonly IProductsRepository _productsRepository;
 
-        public ProductTypesUpdaterService(IProductTypesRepository productTypesRepository)
+
+        public ProductTypesUpdaterService(IProductTypesRepository productTypesRepository, IProductsRepository productsRepository)
         {
             _productTypesRepository = productTypesRepository;
+            _productsRepository = productsRepository;
         }
         public async Task<ProductTypeResponse> UpdateProductType(ProductTypeUpdateRequest productUpdateRequest)
         {
@@ -30,7 +34,14 @@ namespace ProductService.Services.ProductsCategories.ProductTypes
                GetProductTypeById(productUpdateRequest.Id);
                 if (matchingProductType != null)
                 {
-                    matchingProductType.Products = productUpdateRequest.Products;
+                    List<Product> foundProducts = new List<Product>();
+                    foreach (var productId in productUpdateRequest.ProductIds)
+                    {
+                        var product = await _productsRepository.GetProductByProductId(productId);
+                        foundProducts.Add(product);
+                    }
+                    matchingProductType.Products = foundProducts;
+
                     matchingProductType.Name = productUpdateRequest.Name;
                     ProductType ProductTypeAfterUpdate = await _productTypesRepository.UpdateProductType(matchingProductType);
                     return ProductTypeAfterUpdate.ToProductTypeResponse();

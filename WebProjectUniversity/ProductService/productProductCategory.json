@@ -1,0 +1,22 @@
+[
+  {
+    "ProductId": "e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3", // Graphic Tee
+    "ProductCategoryId": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54" // Clothing
+  },
+  {
+    "ProductId": "e95b4df5-8f24-4d1a-9b0a-0eebc6a9e1f3", // Graphic Tee
+    "ProductCategoryId": "78C27D10-B5EC-435D-AE90-60211124DB26" // Summer clothing
+  },
+  {
+    "ProductId": "4a1d0cfc-c4e1-4b4e-b8a7-3fcab13b6cf9", // Summer Dress
+    "ProductCategoryId": "b75f9050-7a85-4d1e-bd86-63e1fa4bdb54" // Clothing
+  },
+  {
+    "ProductId": "E884AFB9-B3B5-40B4-9776-CDAFEB392382", // Elegant Necklace
+    "ProductCategoryId": "f5c8a789-1234-4abc-9def-456789012345" // Jewelry
+  },
+  {
+    "ProductId": "2DD55F91-1655-42D6-9C2B-7F1A1BFA6184", // Casual Stud Earrings
+    "ProductCategoryId": "f5c8a789-1234-4abc-9def-456789012345" // Jewelry
+  }
+]

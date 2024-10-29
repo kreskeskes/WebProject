@@ -16,7 +16,7 @@ namespace ProductService.DTO
 		[StringLength(50)]
 		public string Name { get; set; }
 
-        public List<Product> Products { get; set; } = new List<Product>();
+        public List<Guid> ProductIds { get; set; } = new List<Guid>();
 
 
         public ProductType ToProductType()
@@ -25,7 +25,10 @@ namespace ProductService.DTO
 			{
 				Id = Id,
 				Name = Name,
-				Products =	Products
+				Products =	ProductIds.Select(productId=> new Product()
+				{
+					Id=productId,
+				}).ToList(),
 			};
 		}
 	}

@@ -43,7 +43,6 @@ namespace ProductService.Services.Products
 						foundProduct.Name = productUpdateRequest.Name;
 						foundProduct.Materials= productUpdateRequest.Materials;
 						foundProduct.Length= productUpdateRequest.Length;
-						foundProduct.CategoryIds = productUpdateRequest.CategoryIds;
 						foundProduct.Styles = productUpdateRequest.Styles;
 
 						Product productAfterUpdation = await _productsRepository.UpdateProduct(foundProduct);
