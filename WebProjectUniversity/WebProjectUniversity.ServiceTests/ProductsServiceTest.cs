@@ -64,7 +64,7 @@ namespace WebProjectUniversity.ServiceTests
 
         public async Task AddProduct_ProductName_ToBeNull()
         {
-            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().With(x => x.Name, null as string).Create();
+            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().With(x => x.Name, null as string).With(x=>x.Price, 10).Create();
 
             Product product = productAddRequest.ToProduct();
 
@@ -86,7 +86,7 @@ namespace WebProjectUniversity.ServiceTests
         public async Task AddProduct_ValidProductToBeAdded()
         {
 
-            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().Create();
+            ProductAddRequest productAddRequest = _fixture.Build<ProductAddRequest>().With(x => x.Price, 10).Create();
 
 
             Product product = productAddRequest.ToProduct();
@@ -133,7 +133,7 @@ namespace WebProjectUniversity.ServiceTests
         public async Task DeleteProduct_ProductDeleted()
         {
             //create product that would be added to our mocked repository
-            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
             ProductResponse productResponse = product.ToProductResponse();
 
@@ -163,9 +163,9 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task GetAllProducts_ReturnsAFewProducts()
         {
-            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
-            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
-            Product product3 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
+            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
+            Product product3 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
 
 
@@ -198,7 +198,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task GetProductById_ValidIdReturnsProduct()
         {
-            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
             ProductResponse productResponse_expected = product.ToProductResponse();
 
@@ -217,8 +217,8 @@ namespace WebProjectUniversity.ServiceTests
         public async Task GetFilteredProducts_SearchByNull_SearchStringNull_ReturnsLikeGetAllProducts()
 
         {
-            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
-            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
+            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
             List<Product> products = new List<Product>() { product1, product2 };
 
@@ -244,11 +244,11 @@ namespace WebProjectUniversity.ServiceTests
         {
             
 
-            Product product1 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n1" as string).Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product1 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n1" as string).Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
-            Product product2 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n2" as string).Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product2 = _fixture.Build<Product>().With(temp => temp.Name, "Pill n2" as string).Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
-            Product product3 = _fixture.Build<Product>().With(temp => temp.Name, "n3" as string).Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product3 = _fixture.Build<Product>().With(temp => temp.Name, "n3" as string).Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
 
             List<Product> products = new List<Product>() { product1, product2, product3 };
@@ -303,7 +303,7 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task UpdateProduct_ValidUpdateDetails_ToBeSuccessful()
         {
-            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
             ProductResponse productResponse = product.ToProductResponse();
 
@@ -334,9 +334,9 @@ namespace WebProjectUniversity.ServiceTests
         [Fact]
         public async Task SortProduct_ValidOutput_ToReturnSortedProducts()
         {
-            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product1 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
-            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).Create();
+            Product product2 = _fixture.Build<Product>().Without(x => x.Categories).Without(x => x.ProductType).With(x => x.Price, 10).Create();
 
             List<Product> products = new List<Product>() { product1, product2 };
 

@@ -53,15 +53,15 @@ namespace ProductService.DTO
                        Name == other.Name &&
                        Description == other.Description &&
                        Price == other.Price &&
-                       Sizes == other.Sizes &&
-                       Colors == other.Colors &&
+                       Sizes.SequenceEqual(other.Sizes) &&
+                       Colors.SequenceEqual(other.Colors) &&
                        Brand == other.Brand &&
                        Categories.SequenceEqual(other.Categories) &&
                        ProductType == other.ProductType &&
                        ProductTypeId == other.ProductTypeId &&
                        AgeGenderGroup == other.AgeGenderGroup &&
-                       Materials == other.Materials &&
-                       Styles == other.Styles &&
+                       Materials.OrderBy(kv => kv.Key).SequenceEqual(other.Materials.OrderBy(kv => kv.Key)) &&
+                       Styles.SequenceEqual(other.Styles) &&
                        Length == other.Length;
             }
             return false;
