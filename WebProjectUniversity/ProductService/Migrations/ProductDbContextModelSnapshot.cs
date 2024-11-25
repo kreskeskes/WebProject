@@ -48,10 +48,6 @@ namespace ProductService.Migrations
                     b.Property<string>("Length")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Materials")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -86,7 +82,6 @@ namespace ProductService.Migrations
                             Colors = "[\"Black\",\"White\"]",
                             Description = "A cool graphic t-shirt.",
                             Length = "Regular",
-                            Materials = "{\"Cotton\":50.0,\"Polyester\":50.0}",
                             Name = "Graphic Tee",
                             Price = 29.99m,
                             ProductTypeId = new Guid("7f7e91a5-1b2b-4c6d-a99f-d1f2e5c79f35"),
@@ -101,7 +96,6 @@ namespace ProductService.Migrations
                             Colors = "[\"Red\",\"Blue\"]",
                             Description = "A stylish summer dress.",
                             Length = "Knee-length",
-                            Materials = "{\"Cotton\":20.0,\"Silk\":80.0}",
                             Name = "Summer Dress",
                             Price = 49.99m,
                             ProductTypeId = new Guid("15f1fbdc-9a24-4e9b-a47e-ecf8f95c5a43"),
@@ -116,7 +110,6 @@ namespace ProductService.Migrations
                             Colors = "[\"Gold\",\"Silver\"]",
                             Description = "Beautifully crafted gold earrings for special occasions.",
                             Length = "N/A",
-                            Materials = "{\"Gold\":70.0,\"Silver\":30.0}",
                             Name = "Elegant Necklace",
                             Price = 79.99m,
                             ProductTypeId = new Guid("efd580ad-6076-4008-a2bc-03ff97507bb6"),
@@ -131,7 +124,6 @@ namespace ProductService.Migrations
                             Colors = "[\"Rose Gold\",\"White\"]",
                             Description = "Simple and stylish stud earrings for everyday wear.",
                             Length = "N/A",
-                            Materials = "{\"Rose Gold\":50.0,\"Plastic\":50.0}",
                             Name = "Casual Stud Earrings",
                             Price = 29.99m,
                             ProductTypeId = new Guid("28b1c40d-56c0-4b39-b9b4-f0b6e1c5b2c7"),
@@ -176,6 +168,31 @@ namespace ProductService.Migrations
                             Id = new Guid("78c27d10-b5ec-435d-ae90-60211124db26"),
                             Name = "Summer clothing"
                         });
+                });
+
+            modelBuilder.Entity("ProductService.Entities.MaterialItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Percent")
+                        .HasColumnType("float");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductMaterials", (string)null);
                 });
 
             modelBuilder.Entity("ProductService.Entities.ProductProductCategory", b =>
@@ -311,6 +328,14 @@ namespace ProductService.Migrations
                     b.Navigation("ProductType");
                 });
 
+            modelBuilder.Entity("ProductService.Entities.MaterialItem", b =>
+                {
+                    b.HasOne("Product", null)
+                        .WithMany("Materials")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("ProductService.Entities.ProductProductCategory", b =>
                 {
                     b.HasOne("ProductCategory", "ProductCategory")
@@ -352,6 +377,8 @@ namespace ProductService.Migrations
             modelBuilder.Entity("Product", b =>
                 {
                     b.Navigation("Categories");
+
+                    b.Navigation("Materials");
                 });
 
             modelBuilder.Entity("ProductCategory", b =>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3NuLgIFxDKqwfU1/Rss8iMUKtRM6hWdVIDDyTPoaOac=",
+  "Hash": "xhgUZH+0XMTtnDtMJeZ5Hb5X+g9S46HZ5MYQYTtE8r4=",
   "Source": "WebProjectUniversity.UI",
   "BasePath": "_content/WebProjectUniversity.UI",
   "Mode": "Default",
@@ -35,6 +35,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\js\\addProduct_scripts.js",
+      "SourceId": "WebProjectUniversity.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\",
+      "BasePath": "_content/WebProjectUniversity.UI",
+      "RelativePath": "js/addProduct_scripts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\addProduct_scripts.js"
+    },
     {
       "Identity": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\wwwroot\\StyleSheet.css",
       "SourceId": "WebProjectUniversity.UI",

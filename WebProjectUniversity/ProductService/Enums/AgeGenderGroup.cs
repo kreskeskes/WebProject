@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,11 @@ namespace ProductService.Enums
 	{
 		Men,
 		Women,
+		[Display(Name ="Unisex Adults")]
 		UnisexAdults,
 		Boys,
 		Girls,
+		[Display(Name ="Unisex Kids")]
 		UnisexKids
 	}
 }

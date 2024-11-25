@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using ProductService.Enums;
 using ProductService.Entities;
 using Azure.Core;
+using ProductService.CustomValidations;
 
 
 
@@ -21,16 +22,17 @@ namespace ProductService.DTO
 
 		[Required]
 		[Column(TypeName = "decimal(18, 2)")]
-		public decimal Price { get; set; }
+        [Range(0.01, double.MaxValue, ErrorMessage = "Price must be a positive number.")]
+        public decimal Price { get; set; }
 
 		[Required]
 		public List<SizeOptions> Sizes { get; set; }
 
 		[Required]
-		[StringLength(30)]
-		public List<string> Colors { get; set; }
+		public List<string> Colors { get; set; } = new List<string>();
 
         [Required]
+		[MaterialsValidation]
         public Dictionary<string, float> Materials { get; set; } = new Dictionary<string, float>();
 
         public List<string> Styles { get; set; } = new List<string>();
@@ -45,6 +47,7 @@ namespace ProductService.DTO
         [Required]
         public Guid ProductTypeId { get; set; }
 
+		[Required]
         public List<Guid> CategoryIds { get; set; } = new List<Guid>();
 
         [Required]

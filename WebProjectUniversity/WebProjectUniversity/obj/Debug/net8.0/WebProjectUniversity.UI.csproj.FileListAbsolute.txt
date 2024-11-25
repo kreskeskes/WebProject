@@ -303,3 +303,4 @@ C:\Users\Kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUnive
 C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\productTypes.json
 C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\productProductCategory.json
 C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\bin\Debug\net8.0\productTypeProductCategory.json
+C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity\obj\Debug\net8.0\WebProjectUniversity.UI.MvcApplicationPartsAssemblyInfo.cs

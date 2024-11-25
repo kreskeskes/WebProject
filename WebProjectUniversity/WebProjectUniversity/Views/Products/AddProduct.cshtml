@@ -2,14 +2,16 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var categories = Model?.CategoryIds != null ? Model.CategoryIds : new List<Guid>();
+    Guid? productTypeId = Model?.ProductTypeId;
+
 }
 
-@{
-    List<SizeOptions> sizeOptions = (List<SizeOptions>)ViewBag.SizeOptions;
-}
+
 <div class="page-content">
+    <h3>Add new product</h3>
     <div class="box-container">
-        <h3>Add new product</h3>
         <form asp-controller="products" asp-action="addproduct" method="post">
 
             <div class="form-field-group">
@@ -31,8 +33,8 @@
             <div class="form-field-group">
                 <div class="form-row">
                     <label asp-for="AgeGenderGroup" class="form-label">Gender-Age Category</label>
-                    <select asp-for="AgeGenderGroup" class="classic" asp-items="ViewBag.AgeGenderGroups">
-                        <option value="">--Select age-gender category--</option>
+                    <select asp-for="AgeGenderGroup" asp-items="ViewBag.AgeGenderGroups">
+                        <option value="">--Select age-gender--</option>
                     </select>
                 </div>
                 <span asp-validation-for="AgeGenderGroup" class="text-red form-span"></span>
@@ -43,96 +45,265 @@
                     <label asp-for="Description" class="form-label">Description</label>
                     <textarea asp-for="Description" class="form-input"></textarea>
                 </div>
-                <span asp-validation-for="Name" class="text-red form-span"></span>
+                <span asp-validation-for="Description" class="text-red form-span"></span>
             </div>
 
             <div class="form-field-group">
                 <div class="form-row">
                     <label asp-for="Brand" class="form-label">Brand</label>
-                    <input asp-for="Brand" class="form-input" size="30" required>
+                    <select asp-for="Brand" id="brand-dropdown" style="width:140px" class="form-input">
+                        <option value="">Select a Brand</option>
+                        @foreach (var brand in ViewBag.BrandsList)
+                        {
+                            <option value="@brand">@brand</option>
+                        }
+                    </select>
                 </div>
+                <div class="form-row">
+                    <div style="width:150px"></div>
+                    <input asp-for="Brand" id="brand-input" class="form-input" style="width: 140px;" placeholder="Or type a brand" />
+                </div>
+
                 <span asp-validation-for="Brand" class="text-red form-span"></span>
             </div>
-
             <div class="form-field-group">
-                <label class="form-label-less-bottom-spacing">Sizes</label>
                 <div class="form-row">
-                    <div>
-                        <ul class="size-options">
-                            @foreach (var size in sizeOptions)
-                            {
-                                <li>
-                                    @{
-                                        if (size.GetAttribute<DisplayAttribute>() != null)
+                    <label class="form-label">Product Categories</label>
+                    <div id="product-categories-container">
+                        @for (int i = 0; i < categories.Count; i++)
+                        {
+                            <div class="product-category-select">
+                                <select name="CategoryIds[@i]" style="width:160px;" class="form-select">
+                                    <option value="">Select a Category</option>
+                                    @foreach (var category in ViewBag.ProductCategoriesList)
+                                    {
+                                        var isSelected = category.Value == categories[i].ToString();
+                                        if (isSelected)
                                         {
-                                            string sizeLabel = size.GetAttribute<DisplayAttribute>().Name?.ToString();
-                                            <label>@sizeLabel</label>
+                                            <option value="@category.Value" selected>@category.Text</option>
+
                                         }
                                         else
                                         {
-                                            <label>@size</label>
+                                            <option value="@category.Value">@category.Text</option>
 
                                         }
                                     }
-                                    <input type="checkbox" id="@size.ToString()" name="@size" value="@size" />
-                                </li>
+                                </select>
+                                <button type="button" class="remove-category" style="display:none;">Remove</button>
+                            </div>
+                        }
+                        @if (categories.Count == 0)
+                        {
+                            <div class="product-category-select">
+                                <select name="CategoryIds[0]" style="width:160px;" class="form-select">
+                                    <option value="">Select a Category</option>
+                                    @foreach (var category in ViewBag.ProductCategoriesList)
+                                    {
+                                        <option value="@category.Value">@category.Text</option>
+                                    }
+                                </select>
+                                <button type="button" class="remove-category" style="display:none;">Remove</button>
+                            </div>
+                        }
+                    </div>
+                    <span asp-validation-for="CategoryIds" class="text-red form-span"></span>
+                </div>
+                <a href="javascript:void(0);" id="add-more-categories">Add More Categories?</a>
+            </div>
+
+<div class="form-field-group">
+    <div class="form-row" style="display:block !important;" id="ProductType-container">
+        <label class="form-label">Product Type</label>
+        <div class="product-ProductType-select">
+            <select name="ProductTypeId" id="ProductType-dropdown" class="form-control custom-dropdown" @(categories.Count > 0 ? "" : "disabled")>
+                <option value="">Select a ProductType</option>
+
+                @if (categories.Count > 0)
+                {
+                    @foreach (var productType in ViewBag.ProductTypesList)
+                    {
+                        var isSelected = productType.Value == Model?.ProductTypeId.ToString();
+
+                        <option value="@productType.Value" selected=@(isSelected ? "selected" : "")>@productType.Text</option>
+                    }
+                }
+            </select>
+        </div>
+        <span asp-validation-for="ProductTypeId" class="text-red form-span"></span>
+    </div>
+</div>
+            <div class="form-field-group">
+                <label class="form-label-less-bottom-spacing">Sizes</label>
+                <div class="form-row">
+                    <div class="form-row">
+                        @if (ViewBag.SizeOptions != null)
+                        {
+                            @foreach (SizeOptions size in ViewBag.SizeOptions)
+                            {
+                                <div>
+                                    @{
+                                        string sizeText = size.ToString();
+                                        SizeOptions sizeValue = (SizeOptions)Enum.Parse(typeof(SizeOptions), sizeText);
+
+                                        if (!String.IsNullOrEmpty(size.GetAttribute<DisplayAttribute>()?.Name))
+                                        {
+                                            sizeText = size.GetAttribute<DisplayAttribute>()?.Name.ToString();
+                                        }
+                                        else
+                                        {
+                                            sizeText = sizeValue.ToString();
+                                        }
+                                    }
+                                    <label>@sizeText</label>
+                                    <input type="checkbox" name="Sizes" value="@sizeValue" @(Model?.Sizes != null && Model.Sizes.Contains(sizeValue) ? "checked" : "") />
+                                </div>
                             }
-                        </ul>
+                        }
                     </div>
                 </div>
                 <span asp-validation-for="Sizes" class="text-red form-span"></span>
-            </div>
-
-            <div class="form-field-group">
-                <div class="form-row" style="display:block !important;">
-                    <label class="form-label">Product Categories</label>
-                    <div id="product-categories-container">
-                        <div class="product-category-select">
-                            @Html.DropDownList("SelectedProductCategory", ViewBag.ProductCategoriesList as List<SelectListItem>, "Select a category", new { @class = "form-control custom-dropdown", @id = "product-category-dropdown" })
-                            <button type="button" class="remove-category" style="display: none;">Remove</button>
-                        </div>
-                        <span asp-validation-for="CategoryIds" class="text-red form-span"></span>
-                    </div>
-                </div>
-                <div class="form-row" style="display:block !important;" id="ProductType-container" style="display: none;">
-                    <label class="form-label">Product ProductTypes</label>
-                    <div class="product-ProductType-select">
-                        <select id="ProductType-dropdown" class="form-control custom-dropdown">
-                            <option value="">Select a ProductType</option>
-                        </select>
-                    </div>
-                    <span asp-validation-for="ProductTypeId" class="text-red form-span"></span>
-                </div>
-                <a href="javascript:void(0);" id="add-more-categories">Add More?</a>
             </div>
             <div class="form-field-group">
                 <div class="form-row">
                     <label class="form-label">Colors</label>
                     <div id="colors-container" class="checkbox-container">
+                        <input type="hidden" id="HiddenColorsInput" name="HiddenColors" />
+
                         @foreach (var color in ViewBag.ColorList)
                         {
+                            var isChecked = Model?.Colors != null && Model.Colors.Contains(color.Value);
                             <div class="checkbox-item">
-                                <input type="checkbox" name="SelectedColors" value="@color.Value" id="color_@color.Value" class="form-checkbox">
+                                <input type="checkbox" name="Colors" value="@color.Value" id="color_@color.Value" class="form-checkbox" @(isChecked ? "checked" : "")>
                                 <label for="color_@color.Value" class="checkbox-label">
                                     <span class="color-circle" style="background-color: @color.Value;"></span> @color.Text
                                 </label>
                             </div>
                         }
+
                         <div class="checkbox-item">
-                            <input type="checkbox" id="customColorCheckbox" class="form-checkbox">
+                            @{
+                                var colorList = (List<SelectListItem>)ViewBag.ColorList;
+                            }
+                            <input type="checkbox" id="customColorCheckbox" class="form-checkbox" @(Model?.Colors?.Any(c => !colorList.Select(cl => cl.Value).Contains(c)) == true ? "checked" : "")>
                             <label for="customColorCheckbox" class="checkbox-label">Custom Color</label>
                         </div>
+
                         <div id="custom-color-container">
-                            <div class="custom-color-container" style="display:none;">
-                                <input type="text" style="width:160px;" class="form-input" name="CustomColors[]" placeholder="Enter custom color">
-                                <button type="button" class="remove-custom-color-container" style="display: none;">Remove</button>
-                            </div>
-                            <a href="javascript:void(0);" id="add-more-custom-colors" style="display:none;">Add More?</a>
+                            @if (Model?.Colors != null)
+                            {
+
+
+                                var customColors = Model.Colors.Where(c => !colorList.Select(cl => cl.Value).Contains(c)).ToList();
+                                foreach (var customColor in customColors)
+                                {
+                                    <div class="custom-color-container" style="display:block;">
+                                        <input type="text" style="width:160px;" class="form-input" name="Colors" value="@customColor" placeholder="Enter custom color">
+                                        <button type="button" class="remove-custom-color-container" style="display: inline;">Remove</button>
+                                    </div>
+                                }
+                            }
+                            <a href="javascript:void(0);" id="add-more-custom-colors" style="display:none;">Add New Custom Color?</a>
                         </div>
                     </div>
                 </div>
                 <span asp-validation-for="Colors" class="text-red form-span"></span>
             </div>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label class="form-label">Materials</label>
+                    <div class="materials-container" id="materials-container">
+                        @if (Model?.Materials != null && Model.Materials.Count > 0)
+                        {
+                            int index = 0;
+                            foreach (var material in Model.Materials)
+                            {
+                                <div class="material-entry">
+                                    <div>
+                                        <label for="materialName">Material</label>
+                                        <input type="text" class="form-input" name="Materials[@index].Key" style="width:160px;" value="@material.Key" required placeholder="Material Name" />
+                                    </div>
+                                    <div>
+                                        <label for="materialPercent">Percent</label>
+                                        <input type="number" class="form-input" name="Materials[@index].Value" style="width:86px;" value="@material.Value" min="0" max="100" step="0.01" />
+                                        <span>%</span>
+                                    </div>
+                                    <button type="button" class="remove-material">Remove</button>
+                                </div>
+                                index++;
+                            }
+                        }
+                        else
+                        {
+                            <div class="material-entry">
+                                <div>
+                                    <label for="materialName">Material</label>
+                                    <input type="text" class="form-input" name="Materials[0].Key" style="width:160px;" required placeholder="Material Name" />
+                                </div>
+                                <div>
+                                    <label for="materialPercent">Percent</label>
+                                    <input type="number" class="form-input" name="Materials[0].Value" style="width:86px;" min="0" max="100" step="0.01" />
+                                    <span>%</span>
+                                </div>
+                                <button type="button" class="remove-material">Remove</button>
+                            </div>
+                        }
+                    </div>
+                    <a href="javascript:void(0);" id="add-more-materials">Add More</a>
+                </div>
+            </div>
+            <span asp-validation-for="Materials" class="text-red form-span"></span>
+            <div class="form-field-group">
+                <div class="form-row style-entry">
+                    <label asp-for="Styles" class="form-label">Styles</label>
+                    <select id="styles-dropdown" class="form-input" style="width:140px;">
+                        <option value="">Select a Style</option>
+                        @foreach (var style in ViewBag.StylesList)
+                        {
+                            <option value="@style">@style</option>
+                        }
+                    </select>
+                    <a href="javascript:void(0);" class="add-style" style="margin-left: 10px;">Add Style</a>
+                </div>
+                <div class="form-row">
+                    <div style="width:150px;"></div>
+                    <div>
+                        <input id="styles-input" class="form-input" style="width: 140px;" placeholder="Or type a style" />
+                    </div>
+                </div>
+                <div class="added-styles">
+                    @if (Model?.Styles != null && Model.Styles.Any())
+                    {
+                        foreach (var style in Model.Styles)
+                        {
+                            <div class="style-entry">
+                                <span>@style</span>
+                                <button type="button" class="remove-style" data-style="@style">Remove</button>
+                            </div>
+                        }
+                    }
+                </div>
+                <input type="hidden" id="styles-hidden" name="StylesHidden" value="@string.Join(",", Model?.Styles ?? new List<string>())" />
+                <span asp-validation-for="Styles" class="text-red form-span"></span>
+            </div>
+            <div class="form-field-group">
+                <div class="form-row">
+                    <label asp-for="Length" class="form-label">Length</label>
+                    <select asp-for="Length" id="lengths-dropdown" style="width:140px;" class="form-input">
+                        <option value="">Select Length</option>
+                        @foreach (var length in ViewBag.LengthsList)
+                        {
+                            <option value="@length">@length</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div style="width:150px;"></div>
+                    <input asp-for="Length" id="lengths-input" class="form-input" style="width: 140px;" placeholder="Or type a length" />
+                </div>
+                <span asp-validation-for="Length" class="text-red form-span"></span>
+            </div>
+            <button class="btn btn-green" type="submit">Create Product</button>
         </form>
     </div>
 </div>
@@ -140,124 +311,12 @@
 
 @section Scripts {
     <script>
-        document.getElementById('add-more-categories').addEventListener('click', function () {
-            var container = document.getElementById('product-categories-container');
-            var selectTemplate = container.querySelector('.product-category-select').cloneNode(true);
-
-            // Reset the select element's value
-            selectTemplate.querySelector('select').value = '';
-
-            // Update the name attribute for the cloned select element
-            selectTemplate.querySelector('select').name = 'ProductCategories[' + container.children.length + ']';
-
-            // Display the remove button for the new selectTemplate
-            selectTemplate.querySelector('.remove-category').style.display = 'inline';
-
-            // Add event listener for the remove button
-            selectTemplate.querySelector('.remove-category').addEventListener('click', function () {
-                this.parentElement.remove();
-            });
-
-            container.appendChild(selectTemplate);
-        });
-
-        // Add event listener for the initial remove button if it's visible
-        document.querySelectorAll('.remove-category').forEach(function (button) {
-            button.addEventListener('click', function () {
-                this.parentElement.remove();
-            });
-        });
+        var getProductTypesUrl = '@Url.Action("GetProductTypes", "Products")';
+        var selectedProductTypeId = '@Model?.ProductTypeId'; // Get the selected product type from model
     </script>
-    <script>
-        document.getElementById('customColorCheckbox').addEventListener('change', function () {
-            var customColorInput = document.getElementById('customColorInput');
-            if (this.checked) {
-                customColorInput.style.display = 'inline';
-            } else {
-                customColorInput.style.display = 'none';
-                customColorInput.value = ''; // Clear the custom color input when unchecked
-            }
-        });
-    </script>
-
-
-    <script>
-        document.getElementById('customColorCheckbox').addEventListener('change', function () {
-            var customColorContainer = document.getElementById('custom-color-container');
-            var addMoreLink = document.getElementById('add-more-custom-colors');
-            if (this.checked) {
-                customColorContainer.querySelector('.custom-color-container').style.display = 'block';
-                addMoreLink.style.display = 'inline';
-            } else {
-                customColorContainer.querySelectorAll('.custom-color-container').forEach(function (element) {
-                    element.style.display = 'none';
-                });
-                addMoreLink.style.display = 'none';
-                document.querySelectorAll('input[name="CustomColors[]"]').forEach(function (input) {
-                    input.value = '';
-                });
-            }
-        });
-
-        document.getElementById('add-more-custom-colors').addEventListener('click', function () {
-            var container = document.getElementById('custom-color-container');
-            var inputTemplate = container.querySelector('.custom-color-container').cloneNode(true);
-
-            // Reset the input element's value
-            inputTemplate.querySelector('input').value = '';
-
-            // Display the remove button for the new inputTemplate
-            inputTemplate.querySelector('.remove-custom-color-container').style.display = 'inline';
-
-            // Add event listener for the remove button
-            inputTemplate.querySelector('.remove-custom-color-container').addEventListener('click', function () {
-                this.parentElement.remove();
-            });
-
-            container.appendChild(inputTemplate);
-        });
-
-        // Add event listener for the initial remove button if it's visible
-        document.querySelectorAll('.remove-custom-color-container').forEach(function (button) {
-            button.addEventListener('click', function () {
-                this.parentElement.remove();
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#product-category-dropdown').change(function () {
-                var categoryId = $(this).val();
-                console.log("Category ID selected:", categoryId); // Log the selected category ID for debugging
-                if (categoryId) {
-                    $.ajax({
-                        url: '@Url.Action("GetProductTypes", "Products")',
-                        type: 'GET',
-                        data: { categoryId: categoryId },
-                        success: function (data) {
-                            var ProductTypeDropdown = $('#ProductType-dropdown');
-                            ProductTypeDropdown.empty();
-                            ProductTypeDropdown.append('<option value="">Select a ProductType</option>');
-                            $.each(data, function (index, item) {
-                                ProductTypeDropdown.append($('<option>', {
-                                    value: item.value,
-                                    text: item.text
-                                }));
-                            });
-                            $('#ProductType-container').show();
-                        },
-                        error: function (xhr, status, error) {
-                            console.log("Error: " + error);
-                        }
-                    });
-                } else {
-                    $('#ProductType-dropdown').empty();
-                    $('#ProductType-dropdown').append('<option value="">Select a ProductType</option>');
-                    $('#ProductType-container').hide();
-                }
-            });
-        });
-    </script>
+    <script src="~/js/addProduct_scripts.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
 

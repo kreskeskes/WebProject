@@ -35,10 +35,11 @@ namespace ProductService.Services.Products
 				Product product = productAddRequest.ToProduct();
 				product.Id = Guid.NewGuid();
 
-                foreach (var category in product.Categories)
-                {
-                    category.ProductId = product.Id; // Assign the generated ProductId
-                }
+                //foreach (var category in product.Categories)
+                //{
+                //    category.ProductId = product.Id; // Assign the generated ProductId
+                //}
+
                 await _productsRepository.AddProduct(product);
 
 				return product.ToProductResponse();

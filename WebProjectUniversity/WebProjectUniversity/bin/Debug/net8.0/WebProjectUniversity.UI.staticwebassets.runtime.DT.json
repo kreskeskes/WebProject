@@ -5,6 +5,20 @@
   ],
   "Root": {
     "Children": {
+      "js": {
+        "Children": {
+          "addProduct_scripts.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/addProduct_scripts.js"
+            },
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      },
       "StyleSheet.css": {
         "Children": null,
         "Asset": {

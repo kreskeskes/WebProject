@@ -28,8 +28,7 @@ services:
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: ProductService
-      target: base
-    container_name: ProductService_1
+    container_name: ProductService
     depends_on:
       db:
         condition: service_started
@@ -44,13 +43,11 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: "5000"
       ASPNETCORE_HTTPS_PORTS: "5001"
-      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ConnectionStrings__DefaultConnection: Server=host.docker.internal,1400;Database=WebProjectUniDatabase;Trusted_Connection=false;MultipleActiveResultSets=true;Encrypt=false;user id=sa;password=MyPass@word;
-      DOTNET_USE_POLLING_FILE_WATCHER: "1"
-      NUGET_FALLBACK_PACKAGES: ""
-    image: productservice:dev
+    image: productservice
     labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/bin/Debug/net8.0/ProductService.dll"'
+      com.microsoft.visual-studio.project-name: ProductService
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/ProductService.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
@@ -86,24 +83,8 @@ services:
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\ProductService
-        target: /app
-        bind:
-          create_host_path: true
-      - type: bind
-        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity
-        target: /src
-        bind:
-          create_host_path: true
-      - type: bind
         source: C:\Users\kristy\vsdbg\vs2017u5
         target: /remote_debugger
-        bind:
-          create_host_path: true
-      - type: bind
-        source: C:\Users\kristy\.nuget\packages
-        target: /.nuget/packages
-        read_only: true
         bind:
           create_host_path: true
       - type: bind
@@ -140,7 +121,6 @@ services:
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: WebProjectUniversity.UI
-      target: base
     container_name: WebProjectUniversity.UI
     depends_on:
       productservice:
@@ -156,12 +136,10 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: "5000"
       ASPNETCORE_HTTPS_PORTS: "5001"
-      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      DOTNET_USE_POLLING_FILE_WATCHER: "1"
-      NUGET_FALLBACK_PACKAGES: ""
-    image: webprojectuniversityui:dev
+    image: webprojectuniversityui
     labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/bin/Debug/net8.0/WebProjectUniversity.UI.dll"'
+      com.microsoft.visual-studio.project-name: WebProjectUniversity.UI
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/WebProjectUniversity.UI.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
@@ -197,24 +175,8 @@ services:
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity\WebProjectUniversity
-        target: /app
-        bind:
-          create_host_path: true
-      - type: bind
-        source: C:\Users\kristy\Documents\GitHub\WebProject\WebProjectUniversity
-        target: /src
-        bind:
-          create_host_path: true
-      - type: bind
         source: C:\Users\kristy\vsdbg\vs2017u5
         target: /remote_debugger
-        bind:
-          create_host_path: true
-      - type: bind
-        source: C:\Users\kristy\.nuget\packages
-        target: /.nuget/packages
-        read_only: true
         bind:
           create_host_path: true
       - type: bind

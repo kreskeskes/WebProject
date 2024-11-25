@@ -4,7 +4,7 @@ namespace ProductService.Enums
 {
     public enum SizeOptions
     {
-        [Display(Name="2XS")]
+        [Display(Name = "2XS")]
         XXS,
         XS,
         S,

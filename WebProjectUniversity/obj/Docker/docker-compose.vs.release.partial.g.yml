@@ -1,6 +1,6 @@
 services:
   productservice:
-    container_name: "ProductService_1"
+    container_name: "ProductService"
     build:
       args:
         LAUNCHING_FROM_VS: true

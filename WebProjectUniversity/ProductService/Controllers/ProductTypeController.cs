@@ -73,5 +73,14 @@ namespace ProductService.Controllers
             }
             return NoContent();
         }
+
+
+        // GET: ProductTypeController/Details/5
+        [HttpGet("category/productType/{id}")]
+        public async Task<IActionResult> GetProductTypeByCatrgotyId(Guid id)
+        {
+            var ProductType = await _ProductTypesGetterService.GetProductTypeByCategoryId(id);
+            return Ok(ProductType);
+        }
     }
 }
