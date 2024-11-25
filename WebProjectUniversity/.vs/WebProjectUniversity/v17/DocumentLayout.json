@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FE83884B-4854-459A-9353-158B93AC9C96}|ProductService\\ProductService.csproj|c:\\users\\kristy\\documents\\github\\webproject\\webprojectuniversity\\productservice\\services\\products\\productsadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE83884B-4854-459A-9353-158B93AC9C96}|ProductService\\ProductService.csproj|solutionrelative:productservice\\services\\products\\productsadderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\documents\\github\\webproject\\webprojectuniversity\\webprojectuniversity\\clients\\productserviceclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\clients\\productserviceclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|c:\\users\\kristy\\documents\\github\\webproject\\webprojectuniversity\\webprojectuniversity\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD8063A4-35AF-4DBE-B2D2-55F1AC9D786C}|WebProjectUniversity\\WebProjectUniversity.UI.csproj|solutionrelative:webprojectuniversity\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FE83884B-4854-459A-9353-158B93AC9C96}|ProductService\\ProductService.csproj|c:\\users\\kristy\\documents\\github\\webproject\\webprojectuniversity\\productservice\\dto\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE83884B-4854-459A-9353-158B93AC9C96}|ProductService\\ProductService.csproj|solutionrelative:productservice\\dto\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,24 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebProjectUniversity\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAEwKUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:29:15.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductServiceClient.cs",
+              "DocumentMoniker": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\Clients\\ProductServiceClient.cs",
+              "RelativeDocumentMoniker": "WebProjectUniversity\\Clients\\ProductServiceClient.cs",
+              "ToolTip": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity\\Clients\\ProductServiceClient.cs",
+              "RelativeToolTip": "WebProjectUniversity\\Clients\\ProductServiceClient.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAvwC0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:29:15.852Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductsAdderService.cs",
+              "DocumentMoniker": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\Services\\Products\\ProductsAdderService.cs",
+              "RelativeDocumentMoniker": "ProductService\\Services\\Products\\ProductsAdderService.cs",
+              "ToolTip": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\Services\\Products\\ProductsAdderService.cs",
+              "RelativeToolTip": "ProductService\\Services\\Products\\ProductsAdderService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswBcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:29:15.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductResponse.cs",
               "DocumentMoniker": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\DTO\\ProductResponse.cs",
               "RelativeDocumentMoniker": "ProductService\\DTO\\ProductResponse.cs",
               "ToolTip": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\ProductService\\DTO\\ProductResponse.cs",
               "RelativeToolTip": "ProductService\\DTO\\ProductResponse.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAYwEEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAYwEIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:21:08.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ProductsServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\kristy\\Documents\\GitHub\\WebProject\\WebProjectUniversity\\WebProjectUniversity.ServiceTests\\ProductsServiceTest.cs",
               "RelativeDocumentMoniker": "WebProjectUniversity.ServiceTests\\ProductsServiceTest.cs",
@@ -45,10 +100,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:13:39.321Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }
